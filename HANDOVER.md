@@ -72,15 +72,26 @@ Mobile drawer nav.
 
 ## Swedish translation — in progress
 
-Toggle machinery is done and working. **Translated so far: Overview, §01, §02a** (91 strings).
-A banner shows in Swedish mode saying which sections are done.
+Toggle machinery is done and working. **Translated so far: Overview, §01, §02a, §02b** (227
+strings). A banner shows in Swedish mode saying which sections are done.
 
-**Remaining tranches:** §02b → §03–§06 → §07–§12.
+**Remaining tranches:** §03–§06 → §07–§12.
 
 To continue: add entries to `assets/i18n.sv.js`. The key is the element's visible text with
 whitespace collapsed and tags stripped; the value is the Swedish `innerHTML` (keep
 `<span class="lab">`, `<strong>`, `<code>` markup). Verify hit-rate before committing —
 a mistyped key silently leaves the element in English.
+
+Two throwaway (but reusable) Node scripts in `tools/` help with this: `extract-keys.js s0Xx`
+prints every leaf-element key and diagram `data-t` label for a section, straight off
+`index.html`, so you're translating exact text rather than hand-transcribing it (HTML
+entities included — easy to get wrong by hand). `verify-tranche.js s0Xx` then checks the
+opposite direction: every prose/diagram key in that section has a matching `assets/i18n.sv.js`
+entry, and flags orphaned `dN.*` keys that don't match any element in the section. Run both
+from the repo root (`node tools/extract-keys.js s02b`). Not every English string needs an
+entry — skip ones already fully in Swedish (e.g. "Legalitetsprincipen", "Direkt tvång"); the
+scripts don't know that distinction, so a few false positives on already-Swedish diagram
+labels are expected and fine.
 
 ## Architecture — pending decision
 
