@@ -11,7 +11,7 @@
   var items = [];
 
   /* ---- collect translatable leaf nodes ---- */
-  var SEL = 'p,li,th,td,h1,h2,h3,h4,summary,figcaption,text';
+  var SEL = 'p,li,th,td,h1,h2,h3,h4,summary,figcaption,text,div.ans';
   var INLINE = /^(STRONG|EM|SPAN|CODE|A|TSPAN|BR|SUP|SUB|I|B)$/;
   var nodes = [].filter.call(main.querySelectorAll(SEL), function (el) {
     return [].every.call(el.children, function (c) {

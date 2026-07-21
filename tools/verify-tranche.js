@@ -16,7 +16,7 @@ function decode(s) { return s.replace(/&#(\d+);/g, (_, n) => String.fromCharCode
 function stripTags(s) { return s.replace(/<[^>]+>/g, ''); }
 function keyOf(inner) { return decode(stripTags(inner)).replace(/\s+/g, ' ').trim(); }
 
-const TAGS = ['h2','h3','h4','p','li','th','td','figcaption'];
+const TAGS = ['h1','h2','h3','h4','p','li','th','td','summary','figcaption'];
 const proseKeys = new Set();
 for (const tag of TAGS) {
   const re = new RegExp('<' + tag + '(?:\\s[^>]*)?>([\\s\\S]*?)</' + tag + '>', 'g');
@@ -25,6 +25,12 @@ for (const tag of TAGS) {
     const k = keyOf(m[1]);
     if (k) proseKeys.add(k);
   }
+}
+const ansRe = /<div class="ans">([\s\S]*?)<\/div>/g;
+let am2;
+while ((am2 = ansRe.exec(sec))) {
+  const k = keyOf(am2[1]);
+  if (k) proseKeys.add(k);
 }
 const textRe = /<text[^>]*data-t="([^"]+)"[^>]*>/g;
 const diagIds = new Set();

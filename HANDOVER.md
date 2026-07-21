@@ -70,14 +70,18 @@ Mobile drawer nav.
    as indirekt tvång; and why the guard still cannot seize the man when he returns
    (identification is police work, and `RB 24:7` needs bar gärning/flyende fot).
 
-## Swedish translation — in progress
+## Swedish translation — complete
 
-Toggle machinery is done and working. **Translated so far: Overview, §01–§06** (280 strings).
-A banner shows in Swedish mode saying which sections are done.
+Toggle machinery is done and working. **All 12 sections translated** (453 strings), tracked
+as [GitHub issue #1](https://github.com/Afrosweetness2002/security_training/issues/1) — now
+closed. `#svnote` no longer needs a per-tranche list.
 
-**Remaining tranches:** §07–§12.
+`div.ans` (the self-test answer text) was missing from `app.js`'s translatable-node selector
+until this pass — the 13 `<summary>` questions were already covered, but the answers weren't.
+Fixed by adding `div.ans` to `SEL` in `assets/app.js`.
 
-To continue: add entries to `assets/i18n.sv.js`. The key is the element's visible text with
+If more lecture content gets added later and needs translating: add entries to
+`assets/i18n.sv.js`. The key is the element's visible text with
 whitespace collapsed and tags stripped; the value is the Swedish `innerHTML` (keep
 `<span class="lab">`, `<strong>`, `<code>` markup). Verify hit-rate before committing —
 a mistyped key silently leaves the element in English.
@@ -105,13 +109,23 @@ being keyed by their English text, so they survive an English rewrite. 26 labels
 
 ## Planned next
 
-0. **Decide on the content.json migration** (see `CONTENT_SCHEMA.md`). Do this before 2 and 3.
-1. **Finish the Swedish translation** (three tranches).
-2. **Quiz section** — multiple choice. The 13 existing self-test Q&As in §12 convert directly;
-   they need plausible distractors. Store in `data/quiz.json`.
-3. **Flashcards** — term/definition pairs for memorisation. The definition tables in §01, §02a,
-   §03 and §04 already contain these pairs, and `assets/i18n.sv.js` is effectively an
-   EN↔SV term database. Store in `data/flashcards.json`.
+Tracked as GitHub issues on the repo now — Swedish translation (#1) is done and closed.
+
+1. **[Quiz](https://github.com/Afrosweetness2002/security_training/issues/2)** —
+   **fully Swedish** (not the bilingual toggle pattern), multiple choice + typed-answer modes.
+   The 13 existing self-test Q&As in §12 convert directly; need plausible Swedish distractors.
+   Store in `data/quiz.json`.
+2. **[Flashcards](https://github.com/Afrosweetness2002/security_training/issues/3)** —
+   **fully Swedish** term/definition pairs for memorisation. The definition tables in §01,
+   §02a, §03 and §04 contain these pairs; `assets/i18n.sv.js` is effectively an EN↔SV term
+   database to seed from. Store in `data/flashcards.json`.
+3. **content.json migration** (see `CONTENT_SCHEMA.md`) — considered and deliberately
+   deferred. At current size the real problems it solves (translation drift, quiz/flashcards
+   duplicating section content) have cheaper fixes: `tools/extract-keys.js` +
+   `tools/verify-tranche.js` catch drift already, and scoped extraction scripts can seed the
+   quiz/flashcards from `index.html` without a full render-pipeline rewrite. The migration
+   would also mean the page renders nothing without JS, a regression for a handbook read
+   offline on a phone. Revisit only if drift or duplication actually becomes painful.
 4. Deploy to GitHub Pages.
 
 ## Working notes
