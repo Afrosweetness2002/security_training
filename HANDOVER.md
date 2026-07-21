@@ -64,15 +64,33 @@ scoped to `activeView()` rather than the whole `<main>`. When Quiz (#2) and Flas
 get built, they become additional `.view` containers + viewbar buttons — no rework of this
 plumbing needed.
 
-**Statute auto-linking:** any `<code>BrB 24:1</code>`-style reference anywhere in the
-handbook automatically links to its entry in the Laws glossary (`linkStatutes()` in
-`assets/app.js`, matched by a slugified id, e.g. `#law-brb-24-1`). Clicking one switches to
-the Laws view and scrolls to the entry. This re-runs after every `setLang()` call, since
-Swedish translations in `i18n.sv.js` hardcode plain `<code>` markup that would otherwise wipe
-a link wrapper applied only once at load. New glossary rows just need a matching `id="law-..."`
-— no need to hand-link existing `<code>` refs sitewide.
+**Statute auto-linking + law lookup popover:** any `<code>BrB 24:1</code>`-style reference
+anywhere in the handbook automatically links to its entry in the Laws glossary
+(`linkStatutes()` in `assets/app.js`, matched by a slugified id, e.g. `#law-brb-24-1` —
+`LAWRE` currently matches `BrB`, `RB`, `RF`, `PL`, `FAP`, `LUL` prefixes). Clicking one opens
+`#lawcard`, a popover showing that entry in place — no navigation, nothing lost. It reads the
+glossary `<tr>`'s content live (single source of truth, correctly bilingual for free); "Open
+full Laws page →" inside the card is the explicit fallback to `showView('laws')` +
+`scrollIntoView` for browsing the whole glossary. `linkStatutes()` re-runs after every
+`setLang()` call, since Swedish translations in `i18n.sv.js` hardcode plain `<code>` markup
+that would otherwise wipe a link wrapper applied only once at load. New glossary rows just
+need a matching `id="law-..."` — no need to hand-link existing `<code>` refs sitewide, and no
+need to touch `openLawCard()`/`closeLawCard()`.
 
 **Recently added, in order:**
+-1. **Laws content expansion** — participation in a crime (`BrB 23:4`: gärningsman,
+    medgärningsman, anstiftare, medhjälpare); a penalty-range table for violence and
+    theft/robbery (misshandel → grovt rån) framed explicitly around `RB 24:7`'s gate 1
+    ("fängelse i straffskalan?" — is prison even possible for this crime); the six crimes
+    taught as citizen's-arrest exceptions despite sometimes meeting the two gates on paper
+    (åverkan, olaga intrång, hemfridsbrott, förtal, förolämpning, förargelseväckande
+    beteende), flagged since the reasoning isn't a clean "no fängelse" rule and hemfridsbrott/
+    olaga intrång's penalty scale changed in 2022; `LUL 35 §` for apprehending an offender
+    under 15 (no handcuffs — no legal basis for coercion against a child that age); `RB 27:4`
+    beslag. 15 new glossary rows (29 total). Sourced from AF's lecture notes plus web research
+    against `riksdagen.se`/`lagen.nu`-adjacent sources for the specific penalty ranges — still
+    flagged for compendium verification per the accuracy bar, especially the six-exception
+    reasoning and exactly which crimes carry a förberedelse clause.
 0. **Laws reference section** (§ below the 12 numbered sections, own view) — brott/straff,
    uppsåt vs oaktsamhet, the förberedelse → försök → fullbordan crime stages, and a statute
    glossary seeded from every code already referenced elsewhere in the handbook. Flags a
@@ -98,7 +116,8 @@ a link wrapper applied only once at load. New glossary rows just need a matching
 
 ## Swedish translation — complete
 
-Toggle machinery is done and working. **All 12 sections translated** (453 strings), tracked
+Toggle machinery is done and working. **All 12 sections + the Laws view translated** (559
+strings and growing as Laws content is added), tracked
 as [GitHub issue #1](https://github.com/Afrosweetness2002/security_training/issues/1) — now
 closed. `#svnote` no longer needs a per-tranche list.
 
