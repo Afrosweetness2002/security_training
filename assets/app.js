@@ -90,7 +90,8 @@
      Code refs (BrB 24:1, RB 24:7, ...) anywhere in the doc link to their entry in the
      Laws view. Re-run after every setLang() call: translated innerHTML from i18n.sv.js
      already hardcodes plain <code> markup, which would wipe a link wrapper applied only
-     once at load. */
+     once at load. Clicking one opens a popover card in place (see lawcard below) rather
+     than navigating away — looking up one law shouldn't cost you your scroll position. */
   var LAWRE = /^(BrB|RB|RF|PL|FAP)\b/i;
   function slugify(s) {
     return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -110,11 +111,48 @@
       a.appendChild(el);
       a.addEventListener('click', function (e) {
         e.preventDefault();
-        showView('laws');
-        requestAnimationFrame(function () { target.scrollIntoView({ block: 'start' }); });
+        openLawCard(target, a);
       });
     });
   }
+
+  /* ---- law lookup popover ----
+     Shows one glossary entry in place, read live off its <tr id="law-..."> row in the
+     (possibly hidden) Laws view — that row stays the single source of truth, and since
+     it's already a translated leaf node, the card is correctly bilingual for free. */
+  var lawcard = document.getElementById('lawcard');
+  var lawscrim = document.getElementById('lawscrim');
+  var lawcardClose = document.getElementById('lawcard-close');
+  var lawcardTitle = document.getElementById('lawcard-title');
+  var lawcardBody = document.getElementById('lawcard-body');
+  var lawcardFull = document.getElementById('lawcard-full');
+  var lawcardReturnFocus = null;
+  function openLawCard(target, triggerEl) {
+    lawcardReturnFocus = triggerEl || document.activeElement;
+    var code = target.querySelector('code');
+    var desc = target.querySelector('td:last-child');
+    lawcardTitle.textContent = code ? code.textContent : '';
+    lawcardBody.innerHTML = desc ? desc.innerHTML : '';
+    lawcardFull.onclick = function (e) {
+      e.preventDefault();
+      closeLawCard();
+      showView('laws');
+      requestAnimationFrame(function () { target.scrollIntoView({ block: 'start' }); });
+    };
+    lawcard.hidden = false;
+    lawscrim.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lawcardClose.focus();
+  }
+  function closeLawCard() {
+    if (lawcard.hidden) return;
+    lawcard.hidden = true;
+    lawscrim.hidden = true;
+    document.body.style.overflow = '';
+    if (lawcardReturnFocus && lawcardReturnFocus.focus) lawcardReturnFocus.focus();
+  }
+  lawcardClose.addEventListener('click', closeLawCard);
+  lawscrim.addEventListener('click', closeLawCard);
 
   /* ---- language ---- */
   var banner = document.getElementById('svnote');
@@ -152,7 +190,11 @@
   list.addEventListener('click', function (e) {
     if (e.target.closest('a') && matchMedia('(max-width:900px)').matches) drawer(false);
   });
-  addEventListener('keydown', function (e) { if (e.key === 'Escape') drawer(false); });
+  addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    drawer(false);
+    closeLawCard();
+  });
   addEventListener('resize', function () {
     if (!matchMedia('(max-width:900px)').matches) drawer(false);
   });

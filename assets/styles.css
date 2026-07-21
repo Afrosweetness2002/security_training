@@ -42,7 +42,7 @@ body{
 }
 #toc a:hover{background:var(--accent-soft); color:var(--ink)}
 #toc a.active{color:var(--accent); background:var(--accent-soft); border-left-color:var(--accent); font-weight:600}
-#toc a .n{display:inline-block; width:1.55rem; font-variant-numeric:tabular-nums; opacity:.6}
+#toc a .n{display:inline-block; min-width:1.55rem; margin-right:.15rem; font-variant-numeric:tabular-nums; opacity:.6}
 #toc a.lvl2{font-weight:600; font-size:.795rem; margin-top:.28rem}
 #toc a.lvl3{
   font-size:.735rem; padding-left:2.05rem; padding-top:.24rem; padding-bottom:.24rem;
@@ -103,8 +103,8 @@ code{
   white-space:nowrap;
 }
 a.lawlink{text-decoration:none; cursor:pointer}
-a.lawlink code{transition:.12s}
-a.lawlink:hover code{box-shadow:0 0 0 1.5px var(--code) inset}
+a.lawlink code{transition:.12s; box-shadow:0 0 0 1px color-mix(in srgb,var(--code) 45%,transparent) inset}
+a.lawlink:hover code, a.lawlink:focus-visible code{box-shadow:0 0 0 1.5px var(--code) inset}
 tr[id^="law-"]{scroll-margin-top:1.5rem}
 
 /* ---------- callouts ---------- */
@@ -172,6 +172,31 @@ footer{
 .view[hidden]{display:none !important}
 .tag{font-size:.68rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); font-weight:600}
 
+/* ---------- law lookup popover ---------- */
+#lawscrim{position:fixed; inset:0; z-index:70; background:rgba(0,0,0,.45)}
+#lawscrim[hidden]{display:none}
+#lawcard{
+  position:fixed; z-index:71; left:50%; top:50%; transform:translate(-50%,-50%);
+  width:min(92vw,480px); max-height:80vh; overflow-y:auto;
+  background:var(--panel); border:1px solid var(--line); border-radius:12px;
+  padding:1.4rem 1.5rem 1.3rem; box-shadow:0 12px 40px rgba(0,0,0,.28);
+}
+#lawcard[hidden]{display:none}
+#lawcard-close{
+  position:absolute; top:.7rem; right:.7rem; width:2rem; height:2rem;
+  border:1px solid var(--line); border-radius:8px; background:var(--panel);
+  color:var(--ink-soft); cursor:pointer; font-size:.9rem; line-height:1;
+}
+#lawcard-close:hover{color:var(--ink); border-color:var(--accent)}
+#lawcard-title{font:700 1.05rem/1.3 inherit; color:var(--code); margin:0 1.8rem .6rem 0}
+#lawcard-body{font-size:.92rem; line-height:1.55; color:var(--ink)}
+#lawcard-body .tag{display:block; margin-top:.6rem}
+#lawcard-full{
+  display:inline-block; margin-top:1rem; font-size:.8rem; font-weight:600;
+  color:var(--accent); text-decoration:none;
+}
+#lawcard-full:hover{text-decoration:underline}
+
 /* ---------- mobile ---------- */
 #menubtn{display:none}
 #scrim{display:none}
@@ -236,7 +261,7 @@ footer{
   summary{padding:.85rem 0}
 }
 @media print{
-  #toc,#menubtn,#scrim,#svnote{display:none !important}
+  #toc,#menubtn,#scrim,#svnote,#lawcard,#lawscrim{display:none !important}
   .layout{grid-template-columns:1fr; max-width:none}
   main{max-width:none; padding:0}
   body{background:#fff; color:#000; font-size:11pt}
