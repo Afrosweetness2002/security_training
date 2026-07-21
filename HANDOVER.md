@@ -72,10 +72,10 @@ Mobile drawer nav.
 
 ## Swedish translation — in progress
 
-Toggle machinery is done and working. **Translated so far: Overview, §01, §02a, §02b** (227
-strings). A banner shows in Swedish mode saying which sections are done.
+Toggle machinery is done and working. **Translated so far: Overview, §01–§06** (280 strings).
+A banner shows in Swedish mode saying which sections are done.
 
-**Remaining tranches:** §03–§06 → §07–§12.
+**Remaining tranches:** §07–§12.
 
 To continue: add entries to `assets/i18n.sv.js`. The key is the element's visible text with
 whitespace collapsed and tags stripped; the value is the Swedish `innerHTML` (keep

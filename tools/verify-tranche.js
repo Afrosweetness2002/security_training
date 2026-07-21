@@ -43,10 +43,14 @@ diagIds.forEach(id => {
   if (!(id in SV)) console.log('UNTRANSLATED DIAGRAM (may be already-Swedish, verify):', id);
 });
 
-// 2. Orphaned SV keys: keys in SV that look like they belong to this tranche's diagram range but don't match any node
+// 2. Orphaned SV keys: dN.x keys with no matching data-t anywhere in the whole document
+const allDiagIds = new Set();
+let am;
+const allTextRe = /<text[^>]*data-t="([^"]+)"[^>]*>/g;
+while ((am = allTextRe.exec(html))) allDiagIds.add(am[1]);
 Object.keys(SV).forEach(k => {
-  if (/^d[456]\.\d+$/.test(k) && !diagIds.has(k)) {
-    console.log('ORPHANED DIAGRAM KEY (no matching data-t in section):', k);
+  if (/^d\d+\.\d+$/.test(k) && !allDiagIds.has(k)) {
+    console.log('ORPHANED DIAGRAM KEY (no matching data-t anywhere in index.html):', k);
   }
 });
 

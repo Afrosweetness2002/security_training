@@ -169,6 +169,53 @@ window.SV = {
 "The absence of physical contact is not the absence of coercion. Indirect coercion is the one guards commit by accident.": "Frånvaro av fysisk kontakt är inte frånvaro av tvång. Indirekt tvång är det väktare begår av misstag.",
 "The lecturer’s case: a guard detains someone who stole a pen, then searches for the pen. Safety was the licence; property recovery was the motive. That is an ändamål failure.": "Lärarens fall: en väktare griper någon som stulit en penna, och visiterar sedan efter <em>pennan</em>. Säkerhet var tillståndet; att återfå egendomen var motivet. Det är en ändamålsbrist.",
 
+/* §03 */
+"03 · Work environment": "03 · Arbetsmiljö",
+"Remember — The employer carries the main responsibility, but you must follow rules and use protective gear. Guarding's special risks: lone working (ensamarbete), threats/violence, night work.": "<span class=\"lab\">Kom ihåg</span> — <strong>Arbetsgivaren bär huvudansvaret</strong>, men du måste följa reglerna och använda skyddsutrustning. Bevakningsyrkets särskilda risker: <strong>ensamarbete</strong>, hot/våld, nattarbete.",
+"The framework law for a safe workplace": "Ramlagen för en säker arbetsplats",
+"Employer's ongoing duty to assess and act on risks": "Arbetsgivarens löpande skyldighet att bedöma och åtgärda risker",
+"The authority that supervises and inspects": "Myndigheten som utövar tillsyn och inspekterar",
+
+/* §04 */
+"04 · Guarding service": "04 · Bevakningstjänst",
+"The job in four verbs — Observe · deter · report · act only within your rights. You're the client's \"eyes and ears.\" Reports record facts, not opinions — who, what, where, when, how; no guessing.": "<span class=\"lab\">Jobbet i fyra verb</span> — <strong>Observera · avskräck · rapportera · agera bara inom dina rättigheter.</strong> Du är kundens \"ögon och öron\". Rapporter innehåller <strong>fakta, inte åsikter</strong> — vem, vad, var, när, hur; inga gissningar.",
+"Mobile patrol — rounds between sites": "Mobil patrullering — ronder mellan objekt",
+"Guarding a fixed post": "Bevakning av en fast post",
+"Alarm response — driving to a site when an alarm triggers": "Larmutryckning — köra till ett objekt när ett larm utlöses",
+"Legal duty to report what you observe, accurately": "Laglig skyldighet att rapportera vad du observerar, korrekt",
+"Written brief defining what you may/must do at each site": "Skriftlig instruktion som fastställer vad du får/måste göra på varje objekt",
+
+/* §05 */
+"05 · Technical aids": "05 · Tekniska hjälpmedel",
+"Security works in layers (defence in depth):": "Säkerhet arbetar i lager (djupförsvar):",
+"Camera surveillance is legally restricted (privacy / GDPR) — you can't film anywhere you like.": "<span class=\"lab\">Kameraövervakning är lagligt begränsad</span> (integritet / GDPR) — du får inte filma var du vill.",
+"Mekaniskt skydd — locks, grilles, safes, fencing → slow the intruder": "<strong>Mekaniskt skydd</strong> — lås, galler, kassaskåp, stängsel → <em>fördröjer inkräktaren</em>",
+"Detection — alarms, cameras → signal the larmcentral": "<strong>Detektering</strong> — larm, kameror → signalerar <span class=\"sv\">larmcentralen</span>",
+"Human response — the guard, dispatched to act": "<strong>Mänsklig respons</strong> — väktaren, utskickad för att agera",
+"Each layer buys time for the next. Mechanical protection delays, detection signals, the guard responds.": "Varje lager köper tid åt nästa. Mekaniskt skydd fördröjer, detektering signalerar, väktaren agerar.",
+
+/* §06 */
+"06 · Fire": "06 · Brand",
+"Fire classes (SS-EN3)": "Brandklasser (SS-EN3)",
+"Brand ~10 h · practical": "Brand ~10 h · praktiskt",
+"The fire triangle (brandtriangeln): fire needs heat (värme) + fuel (bränsle) + oxygen (syre) at once. Remove any one and it goes out — and each extinguishing method maps onto a side.": "<strong>Brandtriangeln:</strong> en brand behöver <strong>värme + bränsle + syre</strong> samtidigt. Ta bort en enda och den slocknar — och varje släckmetod motsvarar en sida.",
+"Water only on Class A. Never on liquid, electrical or fat fires. CO₂ is the one for electrical (no residue, doesn't conduct). Old \"Class E\" for electrical is no longer used.": "<span class=\"lab\">Vatten bara på klass A.</span> Aldrig på vätske-, el- eller fettbränder. <strong>CO₂</strong> är rätt val för el (lämnar inga rester, leder inte ström). Den gamla \"klass E\" för el används inte längre.",
+"Smoke kills, not flame — evacuate first, stay low, keep an exit behind you. Drill: pull pin → aim at the base → squeeze → sweep.": "<strong>Rök dödar, inte lågan</strong> — utrym först, håll dig lågt, ha alltid en utgång bakom dig. Metod: <strong>dra ur sprinten → sikta mot basen → tryck → svep.</strong>",
+"Class": "Klass",
+"What burns": "Vad som brinner",
+"Use": "Användning",
+"Solids: wood, paper, textiles, most plastics": "Fasta ämnen: trä, papper, textilier, de flesta plaster",
+"Water · foam · powder": "Vatten · skum · pulver",
+"Liquids: petrol, oil, paint, solvents": "Vätskor: bensin, olja, färg, lösningsmedel",
+"Foam · powder · CO₂ (no water)": "Skum · pulver · CO₂ (inget vatten)",
+"Gases: LPG/gasol, natural gas, acetylene": "Gaser: gasol, naturgas, acetylen",
+"Powder": "Pulver",
+"Metals: magnesium, aluminium": "Metaller: magnesium, aluminium",
+"Special metal agent only": "Endast specialmedel för metallbränder",
+"Cooking fat & oil: fryers, kitchens": "Matfett & olja: fritöser, kök",
+"Special kitchen extinguisher": "Specialsläckare för kök",
+"Break any one side and the fire stops. The three extinguishing methods each attack a different side.": "Bryt en enda sida och branden slocknar. De tre släckmetoderna angriper var sin sida.",
+
 "d1.2": "4 grundlagar",
 "d1.4": "vanliga lagar",
 "d1.6": "föreskrifter",
@@ -234,6 +281,22 @@ window.SV = {
 "d6.9": "— söker bevis",
 "d6.10": "det är inte det befogenheten är till för",
 "d6.11": "Samma händer, samma fickor, samma person — bara syftet ändrades, och det räcker för att göra det olagligt",
+
+"d7.1": "TILLGÅNGEN",
+"d7.2": "det kunden anlitade dig för",
+"d7.4": "2 · DETEKTERING",
+"d7.5": "lås · galler · kassaskåp · stängsel → fördröjer inkräktaren",
+"d7.6": "larm · kameror → signalerar larmcentralen",
+"d7.7": "3 · MÄNSKLIG RESPONS",
+"d7.8": "väktaren, utskickad",
+"d8.1": "BRAND",
+"d8.2": "kräver alla tre",
+"d8.3": "VÄRME",
+"d8.5": "bränsle",
+"d8.7": "syre",
+"d8.9": "ta bort värme · vatten",
+"d8.11": "ta bort syre · CO₂",
+"d8.12": "ANTIKATALYS · pulver",
 
 "d13.6": "NEJ"
 };
