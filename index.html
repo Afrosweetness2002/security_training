@@ -18,12 +18,14 @@
 <nav id="toc">
   <div class="brand">🛡️ VU1 Field Handbook</div>
   <div class="sub">Väktargrundutbildning del 1</div>
+  <div id="viewbar"><button data-view="learning" class="on" data-t="viewbar.learning">📖 Learning</button><button data-view="laws" data-t="viewbar.laws">⚖️ Laws</button></div>
   <div id="langbar"><button data-lang="en" class="on">ENGLISH</button><button data-lang="sv">SVENSKA</button></div>
   <input id="search" type="search" placeholder="Filter…" aria-label="Filter sections">
   <div id="toclist"></div>
 </nav>
 
 <main>
+<div id="view-learning" class="view">
 <div id="svnote" hidden>Hela handboken är översatt till svenska — <strong>Översikt, §01–§12.</strong></div>
 <section id="top">
 <h1>VU1 Field Handbook</h1>
@@ -913,6 +915,89 @@
 <p>English study aid that simplifies Swedish course material for learning. First-aid follows current Svenska HLR-rådet guidance; fire follows SS-EN3; legal content follows the Criminal Code &amp; Code of Judicial Procedure. Always defer to the current Swedish texts, FAP 573-1, and your instructor's official compendium — that's the material you're examined on. <strong>Not legal or medical advice.</strong></p>
 </footer>
 </section>
+</div><!-- /view-learning -->
+
+<div id="view-laws" class="view" hidden>
+<section id="laws">
+<h2>Laws · Statute reference</h2>
+<p class="lede">Lagförteckning — every statute code used anywhere in this handbook, in one place</p>
+<p>Any <code>BrB 24:1</code>-style code elsewhere in the handbook links here — click it to jump straight to the entry instead of hunting back through the section that first mentioned it.</p>
+
+<h3>How a crime is built</h3>
+<p class="lede">Hur ett brott byggs upp</p>
+<p>A <strong>brott</strong> (crime) is a <span class="sv">straffbelagd handling</span> — an act the law punishes — committed either <strong>med uppsåt</strong> (with intent) or <strong>på grund av oaktsamhet</strong> (through negligence). The punishment (<span class="sv">straff</span>) is either a fine (<span class="sv">böter</span>) or prison (<span class="sv">fängelse</span>).</p>
+
+<div class="tw"><table>
+<thead><tr><th></th><th>Uppsåt (intent)</th><th>Oaktsamhet (negligence)</th></tr></thead>
+<tbody>
+<tr><td>What it means</td><td>You meant to do it — knew what you were doing and did it anyway</td><td>You didn't mean to, but failed to take the care a reasonable person would</td></tr>
+<tr><td>Example</td><td>Deliberately breaking a window to get in</td><td>Leaving a fire unattended and it spreads</td></tr>
+<tr><td>Punished by default?</td><td>Yes — intent is the default basis for criminal liability</td><td>Only when the law says so explicitly — <code>BrB 1:2</code></td></tr>
+</tbody></table></div>
+
+<p>A brott also has three stages, and — this is the part students underestimate — <strong>not only the completed act can be a crime:</strong></p>
+
+<figure>
+<svg viewBox="0 0 700 195" role="img" aria-label="The three stages of a crime: preparation, attempt, completion">
+  <defs><marker id="arL" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--accent)"/></marker></defs>
+
+  <rect x="14" y="30" width="205" height="64" rx="9" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"/>
+  <text data-t="d14.1" x="116" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--accent)">1 · FÖRBEREDELSE</text>
+  <text data-t="d14.2" x="116" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">Preparation</text>
+  <text data-t="d14.3" x="116" y="112" text-anchor="middle" font-size="9" fill="var(--ink-soft)">steps toward it · not automatic</text>
+
+  <path d="M 219 62 L 241 62" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#arL)"/>
+
+  <rect x="241" y="30" width="205" height="64" rx="9" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.8"/>
+  <text data-t="d14.4" x="343" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--warn)">2 · FÖRSÖK</text>
+  <text data-t="d14.5" x="343" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">Attempt</text>
+  <text data-t="d14.6" x="343" y="112" text-anchor="middle" font-size="9" fill="var(--ink-soft)">begun, then stopped · not automatic</text>
+
+  <path d="M 446 62 L 468 62" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#arL)"/>
+
+  <rect x="468" y="30" width="205" height="64" rx="9" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.8"/>
+  <text data-t="d14.7" x="570" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--rem)">3 · FULLBORDAN</text>
+  <text data-t="d14.8" x="570" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">Completed</text>
+  <text data-t="d14.9" x="570" y="112" text-anchor="middle" font-size="9" fill="var(--ink-soft)">carried out · always a crime</text>
+
+  <rect x="14" y="135" width="672" height="46" rx="7" fill="var(--idea-bg)" stroke="var(--idea)" stroke-width="1.3"/>
+  <text data-t="d14.10" x="350" y="153" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--idea)">Punishability of the earlier stages varies by crime</text>
+  <text data-t="d14.11" x="350" y="170" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--idea)">Always verify against the current BrB 23 kap. text</text>
+</svg>
+<figcaption>Only fullbordan is automatically a crime. Förberedelse and försök are punishable only when the specific offence says so.</figcaption>
+</figure>
+
+<div class="cal warn">
+<p><span class="lab">Check this is current</span> — A legislative expansion of liability for försök, förberedelse and stämpling was proposed with effective dates 2026-04-01 and 2026-07-01 — the rules may have just changed as you're reading this. Verify against the current <code>BrB 23 kap.</code> text and your instructor's compendium before relying on any specific paragraph on this page.</p>
+</div>
+
+<div class="cal rem">
+<p><span class="lab">Coming next</span> — AF is compiling the specific list of crimes covered on the course, showing which ones punish förberedelse and/or försök and at what penalty. That list will replace this note once it's ready — see <a href="https://github.com/Afrosweetness2002/security_training/issues/4">issue #4</a>.</p>
+</div>
+
+<h3>Statute glossary</h3>
+<p class="lede">Varje lagparagraf som nämns i handboken</p>
+<div class="tw"><table>
+<thead><tr><th>Code</th><th>What it covers</th></tr></thead>
+<tbody>
+<tr id="law-brb-1-1"><td><code>BrB 1:1</code></td><td>Defines what a crime is — an act described in law with a penalty attached. <span class="tag">→ §02b</span></td></tr>
+<tr id="law-brb-1-2"><td><code>BrB 1:2</code></td><td>Default rule: an act is only a crime if committed with <strong>uppsåt</strong>, unless the law explicitly also punishes <strong>oaktsamhet</strong>. <span class="tag">→ this page</span></td></tr>
+<tr id="law-brb-4-4"><td><code>BrB 4:4</code></td><td><span class="sv">Olaga tvång</span> — unlawful coercion, direct or indirect. <span class="tag">→ §02b · §07</span></td></tr>
+<tr id="law-brb-17-kap"><td><code>BrB 17 kap.</code></td><td><span class="sv">Våld eller hot mot tjänsteman</span> — extra protection for a guard on duty. <span class="tag">→ §02a</span></td></tr>
+<tr id="law-brb-23-1"><td><code>BrB 23:1</code></td><td><span class="sv">Försök</span> — attempt. Punishable only for offences the law names. <span class="tag">→ this page</span></td></tr>
+<tr id="law-brb-23-2"><td><code>BrB 23:2</code></td><td><span class="sv">Förberedelse och stämpling</span> — preparation and conspiracy. Punishable only for offences the law names. <span class="tag">→ this page</span></td></tr>
+<tr id="law-brb-24-1"><td><code>BrB 24:1</code></td><td><span class="sv">Nödvärn</span> — self-defence. Fails only if clearly indefensible. <span class="tag">→ §02a</span></td></tr>
+<tr id="law-brb-24-2"><td><code>BrB 24:2</code></td><td><span class="sv">Laga befogenhet</span> — the legal-authority ground for force used to hold a resisting person after a lawful citizen's arrest. <span class="tag">→ §02a</span></td></tr>
+<tr id="law-brb-24-4"><td><code>BrB 24:4</code></td><td><span class="sv">Nöd</span> — necessity. Fails already at merely indefensible — narrower than nödvärn. <span class="tag">→ §02a</span></td></tr>
+<tr id="law-brb-24-6"><td><code>BrB 24:6</code></td><td><span class="sv">Nödvärnsexcess</span> — excused even if excessive force was used, if you could hardly collect yourself in the moment. <span class="tag">→ §02a</span></td></tr>
+<tr id="law-rb-24-7"><td><code>RB 24:7</code></td><td><span class="sv">Envarsgripande</span> — citizen's arrest. Lives in the Code of Judicial Procedure, not the Criminal Code. <span class="tag">→ §02a · §02b · §12</span></td></tr>
+<tr id="law-rf-1-1"><td><code>RF 1:1</code></td><td><span class="sv">Den offentliga makten utövas under lagarna</span> — power flows from the law, never from a uniform or a client. <span class="tag">→ §02b</span></td></tr>
+<tr id="law-rf-1-9"><td><code>RF 1:9</code></td><td><span class="sv">Saklighet och opartiskhet</span> — objectivity and impartiality, the root of objektivitetsprincipen. <span class="tag">→ §01 · §02b</span></td></tr>
+<tr id="law-rf-2-10"><td><code>RF 2:10</code></td><td>Ban on retroactive criminal law — no act is a crime unless a law said so before it happened. <span class="tag">→ §01 · §02b</span></td></tr>
+<tr id="law-pl-19"><td><code>PL 19 §</code></td><td><span class="sv">Skyddsvisitation</span> — protective search for weapons/dangerous objects only, never an evidence search. <span class="tag">→ §02b</span></td></tr>
+</tbody></table></div>
+</section>
+</div><!-- /view-laws -->
 </main>
 </div>
 <script src="assets/i18n.sv.js"></script>

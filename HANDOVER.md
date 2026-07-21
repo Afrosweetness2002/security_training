@@ -23,7 +23,8 @@ Every section ties back to one idea, and it should stay visible in anything adde
   (nödvärn, nöd, envarsgripande), **02b** = the principles that govern using them.
 - Callouts: 💡 key idea (`.cal.idea`) · ⚠️ warning (`.cal.warn`) · ✅ remember (`.cal.rem`).
   Each opens with `<span class="lab">Label</span> — `.
-- Statute refs as inline code: `BrB 24:1`, `RB 24:7`, `RF 1:9`, `PL 19 §`.
+- Statute refs as inline code: `BrB 24:1`, `RB 24:7`, `RF 1:9`, `PL 19 §`. These auto-link to
+  the Laws glossary (see below) — add a matching `id="law-..."` row there for any new code.
 - Diagrams are **hand-written inline SVG** using CSS variables (`var(--accent)`, `var(--ink)`,
   `var(--warn)`…) so they work in light mode, dark mode and print. Do not introduce an image
   file or a charting library.
@@ -49,11 +50,36 @@ narrower than the police's.
 
 ## Current state
 
-**Complete:** all 12 sections. 13 inline SVG diagrams. 13-question self-test.
-Auto-generated nested sidebar with scrollspy. Section filter. Light/dark. Print stylesheet.
-Mobile drawer nav.
+**Complete:** all 12 Learning sections + a Laws reference section. 14 inline SVG diagrams.
+13-question self-test. Auto-generated nested sidebar with scrollspy, scoped to whichever
+view is active. Section filter. Light/dark. Print stylesheet. Mobile drawer nav.
+
+**Site structure — view switcher (added for the Laws section, reused by Quiz/Flashcards
+later):** the page is no longer one continuous scroll. `index.html`'s `<main>` holds two
+sibling `<div class="view">` containers — `#view-learning` (the original §top + 12 sections)
+and `#view-laws` (new) — toggled via `#viewbar` buttons in the sidebar (`showView()` in
+`assets/app.js`). Only one is visible (`hidden` attribute) at a time; switching doesn't
+require scrolling past the other. `buildTOC()`, the search filter, and scrollspy are all
+scoped to `activeView()` rather than the whole `<main>`. When Quiz (#2) and Flashcards (#3)
+get built, they become additional `.view` containers + viewbar buttons — no rework of this
+plumbing needed.
+
+**Statute auto-linking:** any `<code>BrB 24:1</code>`-style reference anywhere in the
+handbook automatically links to its entry in the Laws glossary (`linkStatutes()` in
+`assets/app.js`, matched by a slugified id, e.g. `#law-brb-24-1`). Clicking one switches to
+the Laws view and scrolls to the entry. This re-runs after every `setLang()` call, since
+Swedish translations in `i18n.sv.js` hardcode plain `<code>` markup that would otherwise wipe
+a link wrapper applied only once at load. New glossary rows just need a matching `id="law-..."`
+— no need to hand-link existing `<code>` refs sitewide.
 
 **Recently added, in order:**
+0. **Laws reference section** (§ below the 12 numbered sections, own view) — brott/straff,
+   uppsåt vs oaktsamhet, the förberedelse → försök → fullbordan crime stages, and a statute
+   glossary seeded from every code already referenced elsewhere in the handbook. Flags a
+   pending 2026 legislative change to försök/förberedelse/stämpling liability as unverified —
+   check the current `BrB 23 kap.` text and the instructor's compendium. The crime-by-crime
+   list of what's punishable at each stage is still pending (AF is compiling it) — tracked at
+   [issue #4](https://github.com/Afrosweetness2002/security_training/issues/4), left open.
 1. §07 professional ethics expanded — etik/moral/socialt styrda regler, three kinds of rules,
    the three etiska modeller (sinnelagsetik / konsekvensetik / pliktetik) with the lecturer's
    apple and speed-camera examples, six-question dilemma walkthrough.
@@ -111,6 +137,9 @@ being keyed by their English text, so they survive an English rewrite. 26 labels
 
 Tracked as GitHub issues on the repo now — Swedish translation (#1) is done and closed.
 
+0. **[Laws — crime-by-crime list](https://github.com/Afrosweetness2002/security_training/issues/4)**
+   — the framework, general concepts, and glossary are done; still open pending AF's specific
+   list of which crimes punish förberedelse/försök and at what penalty.
 1. **[Quiz](https://github.com/Afrosweetness2002/security_training/issues/2)** —
    **fully Swedish** (not the bilingual toggle pattern), multiple choice + typed-answer modes.
    The 13 existing self-test Q&As in §12 convert directly; need plausible Swedish distractors.
