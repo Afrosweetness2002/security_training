@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Plain-English study handbook for VU1 (Väktargrundutbildning del 1), the Swedish basic security-guard course.">
+<meta name="theme-color" content="#1f4d3d">
+<title>VU1 Field Handbook — Väktargrundutbildning del 1</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<button id="menubtn" aria-label="Menu" aria-expanded="false" aria-controls="toc">☰</button>
+<div id="scrim"></div>
+<div class="layout">
+
+
+<nav id="toc">
+  <div class="brand">🛡️ VU1 Field Handbook</div>
+  <div class="sub">Väktargrundutbildning del 1</div>
+  <div id="langbar"><button data-lang="en" class="on">ENGLISH</button><button data-lang="sv">SVENSKA</button></div>
+  <input id="search" type="search" placeholder="Filter…" aria-label="Filter sections">
+  <div id="toclist"></div>
+</nav>
+
+<main>
+<div id="svnote" hidden>Svensk version pågår — <strong>Översikt, §01 och §02a</strong> är översatta. Övriga avsnitt visas tills vidare på engelska.</div>
+<section id="top">
+<h1>VU1 Field Handbook</h1>
+<p class="lede">Plain-English study companion to Väktargrundutbildning del 1 — law, fire, first aid and the craft of guarding. 9 days · ~88 lesson hours · written + practical exam · follows FAP 573-1.</p>
+
+<div class="cal idea">
+<p><span class="lab">The one idea behind everything</span> — A väktare has <strong>no police powers.</strong> Your authority is essentially the rights any citizen (<span class="sv">envar</span>) already has, exercised with training, inside your assignment, under FAP 573-1. Almost every exam answer traces back to this.</p>
+</div>
+
+<h4>The road to a full licence</h4>
+<div class="pathline">
+  <span class="step"><strong>VU1</strong> · 9 days · exam</span><span class="arw">→</span>
+  <span class="step"><strong>PYT</strong> · 160 h supervised</span><span class="arw">→</span>
+  <span class="step"><strong>VU2</strong> · 5 days · exam</span><span class="arw">→</span>
+  <span class="step end">Licence · work independently</span>
+</div>
+</section>
+
+<!-- ============ 01 ============ -->
+<section id="s01">
+<h2>01 · Rules of the industry</h2>
+<p class="lede">Regler som styr bevakningsverksamheten <span class="hours">~8 h</span></p>
+<p>Who may run guarding services, who approves guards, and the legal frame it all sits in.</p>
+
+<div class="tw"><table>
+<thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Bevakningsföretag</td><td>Security company selling guarding services (patrol, posts, alarm response)</td></tr>
+<tr><td>Auktorisation</td><td>Authorisation a <em>company</em> must hold to operate legally</td></tr>
+<tr><td>Godkännande</td><td>Personal approval each <em>individual guard</em> must receive (background, reliability)</td></tr>
+<tr><td>Tystnadsplikt</td><td>Duty of confidentiality about what you learn on assignment</td></tr>
+</tbody></table></div>
+
+<h4>Who controls the profession</h4>
+<ul>
+<li><strong>Polismyndigheten</strong> — writes the rulebook → <span class="sv">FAP 573-1</span></li>
+<li><strong>Länsstyrelsen</strong> — authorises companies + approves each guard + supervises</li>
+<li>Base law above it all: <strong>Lag (1974:191) om bevakningsföretag</strong></li>
+</ul>
+
+<div class="cal rem">
+<p><span class="lab">Remember</span> — Company → needs <strong>authorisation</strong>. Person → needs <strong>approval</strong>. Rules come from the <strong>police</strong>; both permissions come from <strong>Länsstyrelsen</strong>. A guard must be identifiable and not confusable with police.</p>
+</div>
+
+<h3>The legal hierarchy &amp; the four grundlagar</h3>
+<p>Top = highest authority. A lower rule can never override a higher one — <span class="sv">grundlag beats law beats regulation</span>. This is <strong>why</strong> guard powers are so narrow.</p>
+
+<figure>
+<svg viewBox="0 0 720 250" role="img" aria-label="Pyramid of the Swedish legal hierarchy">
+  <polygon points="300,18 400,18 428,82 272,82" fill="var(--accent)" opacity=".92"/>
+  <polygon points="268,88 432,88 460,152 240,152" fill="var(--accent)" opacity=".62"/>
+  <polygon points="236,158 464,158 492,222 208,222" fill="var(--accent)" opacity=".34"/>
+  <text data-t="d1.1" x="350" y="47" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">GRUNDLAGAR</text>
+  <text data-t="d1.2" x="350" y="65" text-anchor="middle" font-size="10.5" fill="#fff" opacity=".9">4 fundamental laws</text>
+  <text data-t="d1.3" x="350" y="117" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">VANLIGA LAGAR</text>
+  <text data-t="d1.4" x="350" y="135" text-anchor="middle" font-size="10.5" fill="var(--ink)" opacity=".8">ordinary laws</text>
+  <text data-t="d1.5" x="350" y="187" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">FÖRESKRIFTER</text>
+  <text data-t="d1.6" x="350" y="205" text-anchor="middle" font-size="10.5" fill="var(--ink)" opacity=".8">regulations</text>
+  <line x1="470" y1="50" x2="505" y2="50" stroke="var(--line)" stroke-width="1.5"/>
+  <text data-t="d1.7" x="512" y="46" font-size="11" fill="var(--ink-soft)">RF · TF · YGL · SO</text>
+  <text data-t="d1.8" x="512" y="62" font-size="11" fill="var(--ink-soft)">the constitution layer</text>
+  <line x1="470" y1="120" x2="505" y2="120" stroke="var(--line)" stroke-width="1.5"/>
+  <text data-t="d1.9" x="512" y="116" font-size="11" fill="var(--ink-soft)">Brottsbalken · Rättegångsbalken</text>
+  <text data-t="d1.10" x="512" y="132" font-size="11" fill="var(--ink-soft)">Lag om bevakningsföretag</text>
+  <line x1="500" y1="190" x2="530" y2="190" stroke="var(--line)" stroke-width="1.5"/>
+  <text data-t="d1.11" x="537" y="186" font-size="11" fill="var(--ink-soft)">FAP 573-1</text>
+  <text data-t="d1.12" x="537" y="202" font-size="11" fill="var(--ink-soft)">your operational rulebook</text>
+  <path d="M 150 222 L 150 22" stroke="var(--ink-soft)" stroke-width="1.5" marker-end="url(#ar1)" opacity=".55"/>
+  <defs><marker id="ar1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--ink-soft)"/></marker></defs>
+  <text data-t="d1.13" x="142" y="130" font-size="10.5" fill="var(--ink-soft)" text-anchor="middle" transform="rotate(-90 142 130)">increasing authority</text>
+</svg>
+<figcaption>A lower tier can never override a higher one — which is exactly why a väktare's powers are narrow.</figcaption>
+</figure>
+
+<h4>The four grundlagar in detail</h4>
+<div class="tw"><table>
+<thead><tr><th>Grundlag</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td>Regeringsformen (RF)</td><td>The main constitution. Its <strong>Ch. 2</strong> holds the fundamental rights (protection against deprivation of liberty, searches, coercion) — the ceiling your <span class="sv">envarsgripande</span> and self-defence powers fit beneath</td></tr>
+<tr><td>Tryckfrihetsförordningen (TF)</td><td>Freedom of the Press Act + public access to official documents (<span class="sv">offentlighetsprincipen</span>)</td></tr>
+<tr><td>Yttrandefrihetsgrundlagen (YGL)</td><td>Comparable protection for other media — radio, TV, film, online</td></tr>
+<tr><td>Successionsordningen (SO)</td><td>Succession to the Swedish throne (the oldest, 1810; rarely relevant to guarding)</td></tr>
+</tbody></table></div>
+
+<div class="cal rem">
+<p><span class="lab">For the exam</span> — Regeringsformen is the one that matters for guarding; its Ch. 2 rights are why your authority is limited. The test itself examines the ordinary laws below it (Brottsbalken, Rättegångsbalken).</p>
+</div>
+
+<h3>Fundamental freedoms — RF 2 kap</h3>
+<p class="lede">The six "opinion freedoms" (opinionsfriheter) — Regeringsformen, Chapter 2, § 1</p>
+<p>Every citizen is guaranteed these <strong>against the state</strong> (<span class="sv">gentemot det allmänna</span>):</p>
+
+<div class="tw"><table>
+<thead><tr><th>Frihet</th><th>Freedom</th></tr></thead>
+<tbody>
+<tr><td>Yttrandefrihet</td><td>Freedom of expression</td></tr>
+<tr><td>Informationsfrihet</td><td>Freedom to obtain &amp; receive information</td></tr>
+<tr><td>Mötesfrihet</td><td>Freedom of assembly — to hold and attend meetings</td></tr>
+<tr><td>Demonstrationsfrihet</td><td>Freedom to demonstrate</td></tr>
+<tr><td>Föreningsfrihet</td><td>Freedom of association</td></tr>
+<tr><td>Religionsfrihet</td><td>Freedom of religion</td></tr>
+</tbody></table></div>
+
+<div class="cal idea">
+<p><span class="lab">Why a guard learns these</span> — They're held <em>against the state</em>, and a väktare is a <strong>private actor</strong>, not "det allmänna" — so they don't bind you the way they bind the police. You learn them to know <strong>what not to unlawfully interfere with.</strong> Blocking a lawful assembly, moving along people handing out flyers, or stopping someone praying steps on protected freedoms — and ties straight to the <span class="sv">olaga frihetsberövande</span> risk if you overreach.</p>
+</div>
+
+<h4>Public space vs private property — the practical line</h4>
+<ul>
+<li>In genuinely <strong>public space</strong>, these freedoms are strong and can only be limited <em>by law</em> — e.g. a demonstration needs a police permit under <span class="sv">ordningslagen</span>, and assembly can be restricted for public order.</li>
+<li>On a client's <strong>private property</strong>, the owner's rights let you (acting for them) set conditions and ask people to leave — the freedoms don't grant a right to demonstrate inside a private mall or to stay on private premises.</li>
+</ul>
+<p><span class="tag">Links to</span> <strong>religionsfrihet ↔ §08 discrimination</strong> (you can't treat someone worse for their religion), and the whole set ↔ <strong>§07 yrkesetik / bemötande</strong> (respecting people's rights is part of professional conduct).</p>
+</section>
+
+<!-- ============ 02 ============ -->
+<section id="s02a">
+<h2>02a · Security law</h2>
+<p class="lede">Bevakningsjuridik — the powers themselves <span class="hours">~16 h · biggest exam weight</span></p>
+<p>The heart of the written exam. Everything here is a "freedom from liability" ground — an act that would normally be a crime but isn't, when done in a genuine defensive or emergency situation.</p>
+
+<h3>Self-defence — Nödvärn <code>BrB 24:1</code></h3>
+<p>Repelling a <strong>started or imminent</strong> criminal attack on a person or property. The act is a crime <strong>only if</strong> it is <strong>clearly indefensible</strong> (<span class="sv">uppenbart oförsvarlig</span>) — that word "clearly" gives you real margin. You may also defend <strong>someone else</strong>.</p>
+<p>The four situations: (1) started/imminent criminal attack; (2) resisting property taken back on the spot; (3) unlawful intrusion into room/house/yard/vessel; (4) refusing to leave a home after being told to.</p>
+
+<figure>
+<svg viewBox="0 0 700 180" role="img" aria-label="Comparison of the margin allowed by nödvärn versus nöd">
+  <text data-t="d2.1" x="10" y="24" font-size="12" font-weight="700" fill="var(--ink)">NÖDVÄRN</text>
+  <text data-t="d2.2" x="10" y="40" font-size="10" fill="var(--ink-soft)">criminal attack</text>
+  <rect x="140" y="12" width="400" height="34" rx="6" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.5"/>
+  <rect x="540" y="12" width="140" height="34" rx="6" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text data-t="d2.3" x="340" y="34" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--rem)">protected — wide margin</text>
+  <text data-t="d2.4" x="610" y="34" text-anchor="middle" font-size="11" font-weight="600" fill="var(--warn)">crime</text>
+  <text data-t="d2.5" x="540" y="62" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">uppenbart oförsvarlig</text>
+
+  <text data-t="d2.6" x="10" y="112" font-size="12" font-weight="700" fill="var(--ink)">NÖD</text>
+  <text data-t="d2.7" x="10" y="128" font-size="10" fill="var(--ink-soft)">danger, not a person</text>
+  <rect x="140" y="100" width="250" height="34" rx="6" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.5"/>
+  <rect x="390" y="100" width="290" height="34" rx="6" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text data-t="d2.8" x="265" y="122" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--rem)">protected — narrower</text>
+  <text data-t="d2.9" x="535" y="122" text-anchor="middle" font-size="11" font-weight="600" fill="var(--warn)">crime</text>
+  <text data-t="d2.10" x="390" y="150" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">oförsvarlig</text>
+  <line x1="140" y1="166" x2="680" y2="166" stroke="var(--line)" stroke-width="1"/>
+  <text data-t="d2.11" x="150" y="178" font-size="9.5" fill="var(--ink-soft)">less force</text>
+  <text data-t="d2.12" x="670" y="178" font-size="9.5" fill="var(--ink-soft)" text-anchor="end">more force</text>
+</svg>
+<figcaption>The threshold word does the work: <strong>nödvärn</strong> only fails when force is <em>clearly</em> indefensible, so it tolerates more. <strong>Nöd</strong> fails at merely indefensible — a narrower band.</figcaption>
+</figure>
+
+<div class="tw"><table>
+<thead><tr><th></th><th>Nödvärn (self-defence)</th><th>Nöd (necessity) <code>BrB 24:4</code></th></tr></thead>
+<tbody>
+<tr><td>You act against</td><td>A person's <strong>criminal attack</strong></td><td>A <strong>danger</strong> (fire, accident, illness)</td></tr>
+<tr><td>Loses protection when</td><td><strong>Clearly</strong> indefensible (<span class="sv">uppenbart oförsvarlig</span>)</td><td>Merely indefensible (<span class="sv">oförsvarlig</span>) — narrower</td></tr>
+<tr><td>Example</td><td>Restraining someone attacking you</td><td>Break a window to save someone inside</td></tr>
+</tbody></table></div>
+
+<div class="cal idea">
+<p><span class="lab">Nödvärnsexcess</span> <code>BrB 24:6</code> — Even if you used too much force, you're excused if you "could hardly collect yourself" (<span class="sv">svårligen besinna sig</span>) in the moment.</p>
+</div>
+
+<h3>Citizen's arrest — Envarsgripande <code>RB 24:7</code></h3>
+<div class="cal warn">
+<p><span class="lab">Exam trap</span> — This lives in the <strong>Code of Judicial Procedure (Rättegångsbalken)</strong>, <em>not</em> the Criminal Code.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 700 230" role="img" aria-label="Decision flow for a citizen's arrest">
+  <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="var(--ink-soft)"/></marker></defs>
+  <rect x="8" y="16" width="150" height="52" rx="8" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+  <text data-t="d3.1" x="83" y="38" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--ink)">Offence observed</text>
+  <text data-t="d3.2" x="83" y="55" text-anchor="middle" font-size="10" fill="var(--ink-soft)">start here</text>
+
+  <path d="M 160 42 L 195 42" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <rect x="200" y="10" width="185" height="64" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>
+  <text data-t="d3.3" x="292" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">GATE 1</text>
+  <text data-t="d3.4" x="292" y="47" text-anchor="middle" font-size="10.5" fill="var(--ink)">Prison in the penalty range?</text>
+  <text data-t="d3.5" x="292" y="63" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">fängelse i straffskalan</text>
+
+  <path d="M 387 42 L 422 42" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <rect x="427" y="10" width="185" height="64" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>
+  <text data-t="d3.6" x="519" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">GATE 2</text>
+  <text data-t="d3.7" x="519" y="47" text-anchor="middle" font-size="10.5" fill="var(--ink)">Caught in the act or fleeing?</text>
+  <text data-t="d3.8" x="519" y="63" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">bar gärning / flyende fot</text>
+
+  <path d="M 519 76 L 519 104" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <rect x="404" y="108" width="230" height="46" rx="8" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.6"/>
+  <text data-t="d3.9" x="519" y="127" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--rem)">You MAY seize</text>
+  <text data-t="d3.10" x="519" y="144" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">a right, never a duty</text>
+
+  <path d="M 519 156 L 519 184" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <rect x="404" y="188" width="230" height="36" rx="8" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+  <text data-t="d3.11" x="519" y="211" text-anchor="middle" font-size="10.5" fill="var(--ink)">Hand to police <tspan font-style="italic">skyndsamt</tspan></text>
+
+  <path d="M 292 76 L 292 130 L 288 130" stroke="var(--warn)" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ar2)"/>
+  <rect x="60" y="112" width="228" height="46" rx="8" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.6"/>
+  <text data-t="d3.12" x="174" y="131" text-anchor="middle" font-size="11" font-weight="700" fill="var(--warn)">Any NO → do not detain</text>
+  <text data-t="d3.13" x="174" y="148" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">olaga frihetsberövande risk</text>
+  <text data-t="d3.14" x="300" y="97" font-size="9.5" fill="var(--warn)" font-weight="600">NO</text>
+</svg>
+<figcaption>Both gates must read YES. Force to hold a resisting person then comes from <strong>laga befogenhet</strong> <code>BrB 24:2</code> — necessary and proportionate only.</figcaption>
+</figure>
+
+<div class="cal warn">
+<p><span class="lab">Get it wrong</span> and your "arrest" can itself be a crime — <strong>unlawful deprivation of liberty</strong> (<span class="sv">olaga frihetsberövande</span>, BrB Ch. 4).</p>
+</div>
+
+<p><strong>Also:</strong> a guard on duty has extra protection — violence or threats against them can be <span class="sv">våld/hot mot tjänsteman</span> <code>BrB Ch. 17</code>.</p>
+
+<div class="cal rem">
+<p><span class="lab">Law reflex for any scenario</span> — (1) name the rule + where it lives; (2) does the <em>situation</em> qualify? (3) did the <em>response</em> stay within limits (not clearly indefensible / necessary &amp; proportionate / handed to police promptly)?</p>
+</div>
+
+</section>
+
+<!-- ============ 02b ============ -->
+<section id="s02b">
+<h2>02b · Principles of intervention</h2>
+<p class="lede">De fem principerna, tvång och ändamål — the discipline that governs every power in §02a</p>
+<p>§02a gave you the powers. This half gives you the test each one has to pass before, during and after you use it. In the written exam the powers earn you the marks and these principles decide whether you keep them.</p>
+<h3>The five principles</h3>
+<p class="lede">De fem principerna — the test every intervention has to pass</p>
+<p>Five questions, in order. Each one is a gate: fail a single gate and the action is unlawful, no matter how well you do on the others.</p>
+
+<figure>
+<svg viewBox="0 0 700 250" role="img" aria-label="Four sequential principles with objectivity running throughout">
+  <defs><marker id="ar5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--accent)"/></marker></defs>
+
+  <text data-t="d4.1" x="180" y="16" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--ink-soft)" letter-spacing="1">THRESHOLD · before you act</text>
+  <text data-t="d4.2" x="520" y="16" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--ink-soft)" letter-spacing="1">CONTINUOUS · while you act</text>
+  <line x1="14" y1="24" x2="346" y2="24" stroke="var(--line)" stroke-width="1.5"/>
+  <line x1="354" y1="24" x2="686" y2="24" stroke="var(--line)" stroke-width="1.5"/>
+
+  <line x1="18" y1="66" x2="682" y2="66" stroke="var(--accent)" stroke-width="1.5" opacity=".3" marker-end="url(#ar5)"/>
+
+  <rect x="14" y="40" width="155" height="54" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>
+  <text data-t="d4.3" x="91" y="59" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--accent)">1 · LEGALITET</text>
+  <text data-t="d4.4" x="91" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">May I?</text>
+  <text data-t="d4.5" x="91" y="110" text-anchor="middle" font-size="9" fill="var(--ink-soft)">name the rule, or stop</text>
+
+  <rect x="191" y="40" width="155" height="54" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>
+  <text data-t="d4.6" x="268" y="59" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--accent)">2 · &#196;NDAM&#197;L</text>
+  <text data-t="d4.7" x="268" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">Why?</text>
+  <text data-t="d4.8" x="268" y="110" text-anchor="middle" font-size="9" fill="var(--ink-soft)">the law&#8217;s purpose, not yours</text>
+
+  <rect x="368" y="40" width="155" height="54" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>
+  <text data-t="d4.9" x="445" y="59" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--accent)">3 · BEHOV</text>
+  <text data-t="d4.10" x="445" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">Must I?</text>
+  <text data-t="d4.11" x="445" y="110" text-anchor="middle" font-size="9" fill="var(--ink-soft)">re-asked every second</text>
+
+  <rect x="545" y="40" width="141" height="54" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>
+  <text data-t="d4.12" x="615" y="59" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--accent)">4 · PROPORTION</text>
+  <text data-t="d4.13" x="615" y="80" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)">Worth it?</text>
+  <text data-t="d4.14" x="615" y="110" text-anchor="middle" font-size="9" fill="var(--ink-soft)">caps how hard</text>
+
+  <rect x="14" y="128" width="672" height="62" rx="9" fill="var(--idea-bg)" stroke="var(--idea)" stroke-width="2"/>
+  <text data-t="d4.15" x="350" y="150" text-anchor="middle" font-size="12" font-weight="700" fill="var(--idea)">5 &#183; OBJEKTIVITET &#8212; Am I being fair?</text>
+  <text data-t="d4.16" x="350" y="168" text-anchor="middle" font-size="10" fill="var(--ink-soft)">not a final step &#8212; a condition running underneath the whole encounter</text>
+  <text data-t="d4.17" x="120" y="184" text-anchor="middle" font-size="9" font-style="italic" fill="var(--idea)">before &#183; deciding to engage</text>
+  <text data-t="d4.18" x="350" y="184" text-anchor="middle" font-size="9" font-style="italic" fill="var(--idea)">during &#183; what you see and how you act</text>
+  <text data-t="d4.19" x="590" y="184" text-anchor="middle" font-size="9" font-style="italic" fill="var(--idea)">after &#183; how you write it up</text>
+  <path d="M 91 100 L 91 126" stroke="var(--idea)" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+  <path d="M 268 100 L 268 126" stroke="var(--idea)" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+  <path d="M 445 100 L 445 126" stroke="var(--idea)" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+  <path d="M 615 100 L 615 126" stroke="var(--idea)" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+
+  <rect x="14" y="202" width="672" height="26" rx="6" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.2"/>
+  <text data-t="d4.20" x="350" y="219" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--warn)">Fail any one &#8594; the whole intervention is unlawful</text>
+</svg>
+<figcaption>The first four are gates you pass through. <strong>Objektivitet is not a fifth gate</strong> &#8212; it is the surface you walk on the whole way.</figcaption>
+</figure>
+
+<div class="tw"><table>
+<thead><tr><th>Princip</th><th>The question</th><th>You fail it when</th></tr></thead>
+<tbody>
+<tr><td>Legalitetsprincipen</td><td><strong>May I?</strong> Is there a law that actually gives me this power?</td><td>You act on "company policy", habit, or what the client wants. No legal basis = no action. <code>RF 1:1</code> · <code>BrB 1:1</code></td></tr>
+<tr><td>Ändamålsprincipen</td><td><strong>Why am I doing it?</strong> Am I using the power for the purpose the law intended?</td><td>You detain someone to teach them a lesson, or search a bag to satisfy curiosity. Right power, wrong reason — still unlawful</td></tr>
+<tr><td>Behovsprincipen</td><td><strong>Must I?</strong> Is action needed at all, and is this the mildest measure that works?</td><td>You go hands-on when talking would have worked — or you keep holding someone after the need has passed. <strong>Stop when the need stops</strong></td></tr>
+<tr><td>Proportionalitetsprincipen</td><td><strong>Is it worth it?</strong> Is the harm I cause in reasonable proportion to what I achieve?</td><td>You take someone to the floor over a chocolate bar. The damage outweighs the gain</td></tr>
+<tr><td>Objektivitetsprincipen</td><td><strong>Am I being fair?</strong> <span class="sv">Saklighet och opartiskhet</span> — facts, not assumptions; everyone treated alike</td><td>You decide who the thief is by how they look, then collect only the facts that fit. <code>RF 1:9</code></td></tr>
+</tbody></table></div>
+
+<div class="cal idea">
+<p><span class="lab">Say it as five short questions</span> — <strong>May I? · Why? · Must I? · Is it worth it? · Am I fair?</strong> Useful as a checklist — but the last one isn’t really last. <em>Am I fair?</em> has to be true before you start, not confirmed at the end.</p>
+</div>
+
+<h4>One case through all five</h4>
+<p>Someone walks out of a shop with unpaid goods:</p>
+<ul>
+<li><strong>Legalitet</strong> — prison is in the range for theft and they're caught in the act → <code>RB 24:7</code> gives me the power ✅</li>
+<li><strong>Ändamål</strong> — I'm holding them to hand them to police; not to punish, not to search them, not to extract a confession ✅</li>
+<li><strong>Behov</strong> — they're calm and cooperative, so a hand on the arm and a request to wait is enough. No cuffs ✅</li>
+<li><strong>Proportionalitet</strong> — goods worth 60 kr do not justify a takedown or a broken wrist ✅</li>
+<li><strong>Objektivitet</strong> — I write what I saw, including the parts that don't fit my theory ✅</li>
+</ul>
+
+<div class="cal warn">
+<p><span class="lab">The nuance the exam likes</span> — Strictly, these principles bind <strong>public authorities</strong> (<code>RF 1:9</code>, and <span class="sv">polislagen</span> 8 § for the police), and a väktare is a <strong>private actor, not "det allmänna"</strong>. But they are the standard you're trained, supervised and judged by — and <em>behov</em> and <em>proportionalitet</em> are already built into <strong>laga befogenhet</strong> <code>BrB 24:2</code>, the rule that actually governs your use of force. So they bite in practice even though they reach you indirectly.</p>
+</div>
+<h3>Does the order matter?</h3>
+<p>Mostly yes &#8212; but not for all five, and the exception is worth understanding.</p>
+<p>The tempting picture is a queue: check legality, then purpose, then need, then proportionality, then finally ask whether you were fair. A traffic stop seems to prove it &#8212; the police have the legal right to ask for your licence <em>immediately</em>, and can worry about objectivity later.</p>
+
+<div class="cal idea">
+<p><span class="lab">Why that picture is wrong</span> &#8212; The objectivity didn&#8217;t come later. It came <strong>first</strong>. Before the car was ever pulled over, an officer had to judge objectively whether there was a reason to stop it &#8212; measuring the speed, watching the driving, deciding this car rather than that one. That decision <em>is</em> objektivitetsprincipen at work. It then continues through the whole stop and into the paperwork afterwards.</p>
+</div>
+
+<p>So the honest model is two-layered:</p>
+<ul>
+<li><strong>Legalitet</strong> and <strong>&#228;ndam&#229;l</strong> are genuine <em>threshold</em> questions &#8212; answered before you act, and if either fails you never start.</li>
+<li><strong>Behov</strong> and <strong>proportionalitet</strong> are <em>continuous</em> &#8212; re-asked every second you are acting. The need can end mid-grip, and when it does you must stop.</li>
+<li><strong>Objektivitet</strong> is not a step at all. It is a <em>condition</em> that has to hold before, during and after: when you decide who to approach, what you notice while you act, and what you put in the report.</li>
+</ul>
+
+<div class="cal rem">
+<p><span class="lab">The v&#228;ktare&#8217;s angle</span> &#8212; The numbered order in this handbook is written from <strong>your</strong> decision-making seat, not as a legal ranking. As a guard your very first move is almost always &#8220;do I have any power here at all?&#8221;, because usually the answer is no &#8212; which is why legalitet leads. A police officer starts further forward: their powers are broad and already established, so their live question is which of them to use, and on whom. <strong>Same five principles, different entry point.</strong> Objektivitet sits under both.</p>
+</div>
+
+<h3>Legalitetsprincipen in depth — and the word <em>tvång</em></h3>
+<p class="lede">Ingen makt utan lag — no power without law</p>
+<p>Legalitetsprincipen is the first gate because it is the one that actually creates your authority. It has two halves worth separating:</p>
+<ul>
+<li><strong>For the citizen</strong> — no act is a crime, and no punishment may be imposed, unless a law said so <em>before</em> the act. <code>BrB 1:1</code> · <code>RF 2:10</code> (the ban on retroactive criminal law).</li>
+<li><strong>For anyone exercising power</strong> — <span class="sv">den offentliga makten utövas under lagarna</span> <code>RF 1:1</code>. Power flows <em>from</em> the law; it is never assumed, inherited from a uniform, or granted by a client.</li>
+</ul>
+
+<div class="cal warn">
+<p><span class="lab">Three things that are NOT a legal basis</span> — (1) <strong>the client's wishes</strong> — a client cannot give you a power they don't have themselves; (2) <strong>the bevakningsinstruktion</strong> — it limits and directs your authority, it never creates it; (3) <strong>analogy</strong> — "this is close enough to a citizen's arrest" is not a power. If you cannot name the rule, you do not have the rule.</p>
+</div>
+
+<h4>Tvång — coercion</h4>
+<p><span class="sv">Tvång</span> means getting someone to do, tolerate or refrain from something <strong>against their will</strong>. That is the thing the law regulates — and the mistake guards make is assuming coercion only counts when hands are involved. It doesn't.</p>
+
+<figure>
+<svg viewBox="0 0 700 285" role="img" aria-label="Direct versus indirect coercion, both requiring legal basis">
+  <rect x="12" y="14" width="330" height="150" rx="10" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.9"/>
+  <text data-t="d5.1" x="177" y="40" text-anchor="middle" font-size="13" font-weight="700" fill="var(--warn)">DIREKT TVÅNG</text>
+  <text data-t="d5.2" x="177" y="57" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">force applied to the body</text>
+  <line x1="40" y1="68" x2="314" y2="68" stroke="var(--warn)" stroke-width="1" opacity=".4"/>
+  <text data-t="d5.3" x="36" y="88" font-size="10.5" fill="var(--ink)">• holding, gripping, restraining</text>
+  <text data-t="d5.4" x="36" y="107" font-size="10.5" fill="var(--ink)">• carrying or leading someone out</text>
+  <text data-t="d5.5" x="36" y="126" font-size="10.5" fill="var(--ink)">• handcuffing</text>
+  <text data-t="d5.6" x="36" y="145" font-size="10.5" fill="var(--ink)">• physically blocking with your body</text>
+
+  <rect x="358" y="14" width="330" height="150" rx="10" fill="var(--idea-bg)" stroke="var(--idea)" stroke-width="1.9"/>
+  <text data-t="d5.7" x="523" y="40" text-anchor="middle" font-size="13" font-weight="700" fill="var(--idea)">INDIREKT TVÅNG</text>
+  <text data-t="d5.8" x="523" y="57" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">pressure on the will — no hands</text>
+  <line x1="386" y1="68" x2="660" y2="68" stroke="var(--idea)" stroke-width="1" opacity=".4"/>
+  <text data-t="d5.9" x="382" y="88" font-size="10.5" fill="var(--ink)">• "stay here or I'll detain you"</text>
+  <text data-t="d5.10" x="382" y="107" font-size="10.5" fill="var(--ink)">• locking a door, holding a lift</text>
+  <text data-t="d5.11" x="382" y="126" font-size="10.5" fill="var(--ink)">• keeping someone's ID or bag</text>
+  <text data-t="d5.12" x="382" y="145" font-size="10.5" fill="var(--ink)">• threatening a consequence to force compliance</text>
+
+  <path d="M 177 168 L 177 196 L 330 196" stroke="var(--ink-soft)" stroke-width="1.7" fill="none" marker-end="url(#ar2)"/>
+  <path d="M 523 168 L 523 196 L 370 196" stroke="var(--ink-soft)" stroke-width="1.7" fill="none" marker-end="url(#ar2)"/>
+  <rect x="150" y="212" width="400" height="58" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+  <text data-t="d5.13" x="350" y="236" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--accent)">BOTH are tvång — both need a legal basis</text>
+  <text data-t="d5.14" x="350" y="256" text-anchor="middle" font-size="10" fill="var(--ink-soft)">no rule to name = olaga tvång / olaga frihetsberövande</text>
+</svg>
+<figcaption>The absence of physical contact is not the absence of coercion. Indirect coercion is the one guards commit by accident.</figcaption>
+</figure>
+
+<div class="tw"><table>
+<thead><tr><th></th><th>Direkt tvång</th><th>Indirekt tvång</th></tr></thead>
+<tbody>
+<tr><td>What it does</td><td>Overrides the body — the person is moved or held regardless of their will</td><td>Overrides the will — the person "chooses", but only because you removed the real alternative</td></tr>
+<tr><td>Looks like</td><td>Grip, restraint, carry-out, handcuffs</td><td>Threat of a consequence, locked door, withheld ID, standing in the only exit</td></tr>
+<tr><td>Feels like (to you)</td><td>Obviously serious — you know you're using force</td><td>Feels harmless — which is exactly the trap</td></tr>
+<tr><td>Where the power comes from</td><td><code>BrB 24:1</code> nödvärn · <code>BrB 24:2</code> laga befogenhet · <code>RB 24:7</code> envarsgripande · <code>BrB 24:4</code> nöd</td><td>Same list. There is no separate, softer permission for "just words"</td></tr>
+<tr><td>If you have no basis</td><td>Assault (<span class="sv">misshandel</span>), unlawful deprivation of liberty</td><td>Unlawful coercion (<span class="sv">olaga tvång</span> <code>BrB 4:4</code>), unlawful threat, unlawful deprivation of liberty</td></tr>
+</tbody></table></div>
+
+<div class="cal idea">
+<p><span class="lab">The test that catches both</span> — Ask: <strong>"Is this person free to walk away right now?"</strong> If the honest answer is no — for any reason, whether your hand or your words put them there — you are using <span class="sv">tvång</span>, and you must be able to name the rule that permits it.</p>
+</div>
+
+<div class="cal warn">
+<p><span class="lab">The everyday version</span> — Asking someone to wait for the police is <strong>not</strong> coercion; they're free to refuse and leave. Telling them they <em>may not</em> leave — or standing in the doorway so they can't — <strong>is</strong>. The words are similar; the legal position is completely different. If you don't have <code>RB 24:7</code>, you may ask, and you must accept "no".</p>
+</div>
+
+<div class="cal rem">
+<p><span class="lab">How the five principles land on tvång</span> — <strong>Legalitet</strong> asks whether you may coerce at all. <strong>Ändamål</strong> asks whether you're coercing for the reason the rule exists. <strong>Behov</strong> pushes you down the ladder: <em>voice before hands, and no coercion at all if a request works.</em> <strong>Proportionalitet</strong> caps how hard. <strong>Objektivitet</strong> asks whether you'd coerce this person if they looked different.</p>
+</div>
+<h3>&#196;ndam&#229;lsprincipen in depth &#8212; a power may only serve its own purpose</h3>
+<p class="lede">Lagst&#246;d f&#229;r bara anv&#228;ndas f&#246;r sitt syfte</p>
+<p>Every power in the law was created to solve one specific problem. Using it to solve a <em>different</em> problem &#8212; even a reasonable one, even one you care about &#8212; is a misuse, and the fact that you were entitled to the power in the first place does not save you.</p>
+
+<h4>The worked example &#8212; skyddsvisitation</h4>
+<p>A protective search (<span class="sv">skyddsvisitation</span>, the model for which is <code>PL 19 &#167;</code>) exists for <strong>one reason: safety.</strong> You are looking for <strong>weapons and dangerous objects</strong> &#8212; things that could be used to harm you, the person, or a bystander.</p>
+
+<figure>
+<svg viewBox="0 0 700 190" role="img" aria-label="Correct versus incorrect purpose for a protective search">
+  <rect x="12" y="14" width="332" height="118" rx="10" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.9"/>
+  <text data-t="d6.1" x="178" y="40" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--rem)">&#10003; RIGHT PURPOSE</text>
+  <text data-t="d6.2" x="178" y="60" text-anchor="middle" font-size="10" fill="var(--ink-soft)">why the power exists</text>
+  <line x1="42" y1="70" x2="314" y2="70" stroke="var(--rem)" stroke-width="1" opacity=".4"/>
+  <text data-t="d6.3" x="178" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Searching for weapons</text>
+  <text data-t="d6.4" x="178" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">&amp; dangerous objects</text>
+  <text data-t="d6.5" x="178" y="126" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">so nobody gets hurt</text>
+
+  <rect x="356" y="14" width="332" height="118" rx="10" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.9"/>
+  <text data-t="d6.6" x="522" y="40" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--warn)">&#10007; WRONG PURPOSE</text>
+  <text data-t="d6.7" x="522" y="60" text-anchor="middle" font-size="10" fill="var(--ink-soft)">the same search, misused</text>
+  <line x1="386" y1="70" x2="658" y2="70" stroke="var(--warn)" stroke-width="1" opacity=".4"/>
+  <text data-t="d6.8" x="522" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">Hunting for the stolen pen</text>
+  <text data-t="d6.9" x="522" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">&#8212; looking for evidence</text>
+  <text data-t="d6.10" x="522" y="126" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">that is not what the power is for</text>
+
+  <rect x="12" y="148" width="676" height="30" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.4"/>
+  <text data-t="d6.11" x="350" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">Same hands, same pockets, same person &#8212; only the purpose changed, and that is enough to make it unlawful</text>
+</svg>
+<figcaption>The lecturer&#8217;s case: a guard detains someone who stole a pen, then searches for <em>the pen</em>. Safety was the licence; property recovery was the motive. That is an &#228;ndam&#229;l failure.</figcaption>
+</figure>
+
+<div class="cal warn">
+<p><span class="lab">The trap</span> &#8212; A protective search is <strong>not</strong> an evidence search. If your hand is in someone&#8217;s pocket because you want the stolen goods rather than because you want to know whether there&#8217;s a knife in there, you have used a safety power to do police work. Right power, wrong purpose &#8212; still unlawful.</p>
+</div>
+
+<div class="cal idea">
+<p><span class="lab">Ask yourself mid-action</span> &#8212; <strong>&#8220;If I found nothing dangerous, would I stop searching?&#8221;</strong> If the honest answer is no &#8212; you&#8217;d keep going until you found the pen &#8212; then safety was never the real purpose, and the search is not what you&#8217;ll claim it was in the report.</p>
+</div>
+
+<div class="cal rem">
+<p><span class="lab">Exam framing</span> &#8212; Name the purpose out loud when you answer a scenario: <em>&#8220;I searched for weapons and dangerous objects, for safety.&#8221;</em> If the scenario tempts you into recovering property or gathering proof, that&#8217;s the trap being set. Defer to your instructor&#8217;s compendium for the exact scope of a v&#228;ktare&#8217;s search rights &#8212; they are narrower than the police&#8217;s.</p>
+</div>
+
+<h3>Case study &#8212; the cashier who was sure</h3>
+<p class="lede">Where objektivitet, legalitet and tv&#229;ng all meet in one shift</p>
+<p>A cashier tells you she watched a man take items. She kept an eye on him the whole time &#8212; while serving other customers, and while talking to you. She is certain.</p>
+
+<div class="cal idea">
+<p><span class="lab">First question: is she objective?</span> &#8212; She may be completely honest and still be wrong. She was serving customers and holding a conversation; her attention was split. Believing her is not the same as <strong>knowing</strong>. Objektivitetsprincipen means you act on what you <em>objectively know</em>, not on how convincing the witness sounded.</p>
+</div>
+
+<h4>What you may NOT do</h4>
+<div class="tw"><table>
+<thead><tr><th>Action</th><th>Why not</th></tr></thead>
+<tbody>
+<tr><td>Search him</td><td>No legal basis. A search needs a lawful detention behind it, and you don&#8217;t have one &#8212; you have someone else&#8217;s impression</td></tr>
+<tr><td>Question him</td><td>You have no power to interrogate. A uniformed guard asking &#8220;did you take something?&#8221; puts real pressure on a person to answer &#8212; that pressure is <span class="sv">indirekt tv&#229;ng</span>. Their freedom to say nothing is theirs to keep</td></tr>
+<tr><td>Hold or block him</td><td>Same problem, more visibly. Without <code>RB 24:7</code> he is free to walk away at any moment</td></tr>
+</tbody></table></div>
+
+<h4>What you MAY do</h4>
+<ul>
+<li><strong>Watch.</strong> Observation breaks no law and is most of the job.</li>
+<li><strong>Be visible.</strong> Say hello. Presence is lawful, often effective, and costs nobody a right.</li>
+<li><strong>Report what you were told</strong> &#8212; as what it is: a cashier&#8217;s account, not an established fact.</li>
+</ul>
+
+<h4>The twist &#8212; he leaves, the CCTV confirms it, and he comes back</h4>
+<p>You review the footage. He <em>did</em> take the items. Days later he walks back into the store. Can you seize him now?</p>
+
+<div class="cal warn">
+<p><span class="lab">No &#8212; and this surprises most students</span></p>
+<p><strong>The lecturer&#8217;s reason:</strong> you cannot be certain it is the same man. Recognising a face from footage is not identification. <strong>Only the police can positively identify a person</strong>; a v&#228;ktare has no power and no reliable means to do it &#8212; and there is always a chance of seizing the wrong person, which is a serious wrong done to someone innocent.</p>
+<p><strong>The statutory reason, on top of it:</strong> <code>RB 24:7</code> requires <span class="sv">bar g&#228;rning eller flyende fot</span> &#8212; caught in the act or in immediate flight. A man walking calmly back in days later is neither. The gate simply isn&#8217;t open.</p>
+</div>
+
+<div class="cal rem">
+<p><span class="lab">What to do instead</span> &#8212; The footage goes to the <strong>police</strong>, with a report. Identification and historic offences are their work, not yours. Your job was to observe accurately and record it honestly &#8212; and you did.</p>
+</div>
+
+<div class="cal idea">
+<p><span class="lab">The through-line</span> &#8212; Notice how little of this case is about force. Almost every wrong answer here is a <em>quiet</em> one: a question, a certainty borrowed from someone else, a hand on an arm because you recognised a face. <strong>A v&#228;ktare has no police powers</strong> &#8212; and that limit bites hardest in exactly the moments when you feel most sure you&#8217;re right.</p>
+</div>
+
+</section>
+
+<!-- ============ 03 ============ -->
+<section id="s03">
+<h2>03 · Work environment</h2>
+<p class="lede">Arbetsmiljö <span class="hours">~2 h</span></p>
+<div class="tw"><table>
+<thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Arbetsmiljölagen (AML)</td><td>The framework law for a safe workplace</td></tr>
+<tr><td>Systematiskt arbetsmiljöarbete (SAM)</td><td>Employer's ongoing duty to assess and act on risks</td></tr>
+<tr><td>Skyddsombud</td><td>Employee-elected safety representative</td></tr>
+<tr><td>Arbetsmiljöverket</td><td>The authority that supervises and inspects</td></tr>
+</tbody></table></div>
+<div class="cal rem">
+<p><span class="lab">Remember</span> — The <strong>employer carries the main responsibility</strong>, but you must follow rules and use protective gear. Guarding's special risks: <strong>lone working</strong> (<span class="sv">ensamarbete</span>), threats/violence, night work.</p>
+</div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section id="s04">
+<h2>04 · Guarding service</h2>
+<p class="lede">Bevakningstjänst <span class="hours">~10 h</span></p>
+<div class="tw"><table>
+<thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Rondering</td><td>Mobile patrol — rounds between sites</td></tr>
+<tr><td>Stationär bevakning</td><td>Guarding a fixed post</td></tr>
+<tr><td>Larmutryckning</td><td>Alarm response — driving to a site when an alarm triggers</td></tr>
+<tr><td>Rapporteringsskyldighet</td><td>Legal duty to report what you observe, accurately</td></tr>
+<tr><td>Bevakningsinstruktion</td><td>Written brief defining what you may/must do at each site</td></tr>
+</tbody></table></div>
+<div class="cal idea">
+<p><span class="lab">The job in four verbs</span> — <strong>Observe · deter · report · act only within your rights.</strong> You're the client's "eyes and ears." Reports record <strong>facts, not opinions</strong> — who, what, where, when, how; no guessing.</p>
+</div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section id="s05">
+<h2>05 · Technical aids</h2>
+<p class="lede">Tekniska hjälpmedel <span class="hours">~8 h</span></p>
+<p>Security works in <strong>layers</strong> (defence in depth):</p>
+
+<figure>
+<svg viewBox="0 0 700 200" role="img" aria-label="Defence in depth — three concentric layers">
+  <rect x="20" y="14" width="440" height="172" rx="14" fill="none" stroke="var(--accent)" stroke-width="2" opacity=".85"/>
+  <rect x="70" y="42" width="340" height="116" rx="12" fill="none" stroke="var(--accent)" stroke-width="2" opacity=".6" stroke-dasharray="6 4"/>
+  <rect x="130" y="72" width="220" height="56" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+  <text data-t="d7.1" x="240" y="97" text-anchor="middle" font-size="12" font-weight="700" fill="var(--accent)">THE ASSET</text>
+  <text data-t="d7.2" x="240" y="114" text-anchor="middle" font-size="10" fill="var(--ink-soft)">what the client hired you for</text>
+  <text data-t="d7.3" x="240" y="33" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">1 · MEKANISKT SKYDD</text>
+  <text data-t="d7.4" x="240" y="62" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">2 · DETECTION</text>
+  <text data-t="d7.5" x="240" y="176" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">locks · grilles · safes · fencing → slow the intruder</text>
+  <text data-t="d7.6" x="240" y="148" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">alarms · cameras → signal the larmcentral</text>
+  <path d="M 470 100 L 505 100" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <rect x="512" y="72" width="170" height="56" rx="10" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.8"/>
+  <text data-t="d7.7" x="597" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="var(--rem)">3 · HUMAN RESPONSE</text>
+  <text data-t="d7.8" x="597" y="112" text-anchor="middle" font-size="10" fill="var(--ink-soft)">the guard, dispatched</text>
+</svg>
+<figcaption>Each layer buys time for the next. Mechanical protection delays, detection signals, the guard responds.</figcaption>
+</figure>
+
+<ol>
+<li><strong>Mekaniskt skydd</strong> — locks, grilles, safes, fencing → <em>slow the intruder</em></li>
+<li><strong>Detection</strong> — alarms, cameras → signal the <span class="sv">larmcentral</span></li>
+<li><strong>Human response</strong> — the guard, dispatched to act</li>
+</ol>
+<div class="cal warn">
+<p><span class="lab">Camera surveillance is legally restricted</span> (privacy / GDPR) — you can't film anywhere you like.</p>
+</div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section id="s06">
+<h2>06 · Fire</h2>
+<p class="lede">Brand <span class="hours">~10 h · practical</span></p>
+<p><strong>The fire triangle (brandtriangeln):</strong> fire needs <strong>heat (värme) + fuel (bränsle) + oxygen (syre)</strong> at once. Remove any one and it goes out — and each extinguishing method maps onto a side.</p>
+
+<figure>
+<svg viewBox="0 0 700 260" role="img" aria-label="The fire triangle with matching extinguishing methods">
+  <polygon points="350,30 190,225 510,225" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="2.5"/>
+  <text data-t="d8.1" x="350" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="var(--warn)">FIRE</text>
+  <text data-t="d8.2" x="350" y="160" text-anchor="middle" font-size="10" fill="var(--ink-soft)">needs all three</text>
+
+  <text data-t="d8.3" x="350" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">VÄRME · heat</text>
+  <text data-t="d8.4" x="175" y="245" text-anchor="end" font-size="12" font-weight="700" fill="var(--ink)">BRÄNSLE</text>
+  <text data-t="d8.5" x="175" y="258" text-anchor="end" font-size="10" fill="var(--ink-soft)">fuel</text>
+  <text data-t="d8.6" x="525" y="245" font-size="12" font-weight="700" fill="var(--ink)">SYRE</text>
+  <text data-t="d8.7" x="525" y="258" font-size="10" fill="var(--ink-soft)">oxygen</text>
+
+  <line x1="270" y1="128" x2="150" y2="105" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <rect x="10" y="82" width="140" height="44" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+  <text data-t="d8.8" x="80" y="101" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">KYLNING</text>
+  <text data-t="d8.9" x="80" y="117" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">remove heat · water</text>
+
+  <line x1="430" y1="128" x2="550" y2="105" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <rect x="550" y="82" width="142" height="44" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+  <text data-t="d8.10" x="621" y="101" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">KVÄVNING</text>
+  <text data-t="d8.11" x="621" y="117" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">remove oxygen · CO₂</text>
+
+  <line x1="350" y1="200" x2="350" y2="232" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <rect x="272" y="230" width="156" height="26" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+  <text data-t="d8.12" x="350" y="247" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--accent)">ANTIKATALYS · powder</text>
+</svg>
+<figcaption>Break any one side and the fire stops. The three extinguishing methods each attack a different side.</figcaption>
+</figure>
+
+<h4>Fire classes (SS-EN3)</h4>
+<div class="tw"><table>
+<thead><tr><th>Class</th><th>What burns</th><th>Use</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>Solids: wood, paper, textiles, most plastics</td><td>Water · foam · powder</td></tr>
+<tr><td>B</td><td>Liquids: petrol, oil, paint, solvents</td><td>Foam · powder · CO₂ <em>(no water)</em></td></tr>
+<tr><td>C</td><td>Gases: LPG/gasol, natural gas, acetylene</td><td>Powder</td></tr>
+<tr><td>D</td><td>Metals: magnesium, aluminium</td><td>Special metal agent only</td></tr>
+<tr><td>F</td><td>Cooking fat &amp; oil: fryers, kitchens</td><td>Special kitchen extinguisher</td></tr>
+</tbody></table></div>
+
+<div class="cal warn">
+<p><span class="lab">Water only on Class A.</span> Never on liquid, electrical or fat fires. <strong>CO₂</strong> is the one for electrical (no residue, doesn't conduct). Old "Class E" for electrical is no longer used.</p>
+<p><strong>Smoke kills, not flame</strong> — evacuate first, stay low, keep an exit behind you. Drill: <strong>pull pin → aim at the base → squeeze → sweep.</strong></p>
+</div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section id="s07">
+<h2>07 · Professional ethics</h2>
+<p class="lede">Yrkesetik och moral <span class="hours">~8 h</span></p>
+<p>You have a small amount of authority and a uniform that makes people assume you have far more. Ethics is the subject that governs what you do with that gap — and it quietly decides most scenario questions on the exam.</p>
+
+<h3>The four concepts</h3>
+<div class="tw"><table>
+<thead><tr><th>Term</th><th>Plain English</th></tr></thead>
+<tbody>
+<tr><td>Etik</td><td>The <em>thinking</em>. Systematic reasoning about what is right and wrong, and why. From Greek <span class="sv">ethos</span> — character, custom. Etik is the map</td></tr>
+<tr><td>Moral</td><td>The <em>doing</em>. How you actually act when it costs you something. From Latin <span class="sv">mores</span> — customs. Moral is the route you actually walked</td></tr>
+<tr><td>Socialt styrda regler</td><td>Socially governed rules — the unwritten expectations of a group: workplace culture, custom, courtesy, "how we do things here". Nobody voted on them and nobody wrote them down, but everyone notices when you break one</td></tr>
+<tr><td>Hur man förhåller sig till etiska regler</td><td>How you <em>relate</em> to ethical rules — knowing they exist, choosing consciously rather than by reflex or mood, and being able to justify the choice afterwards to a supervisor, a report, or a court</td></tr>
+</tbody></table></div>
+
+<div class="cal idea">
+<p><span class="lab">Etik vs moral</span> — Both words originally meant "custom", which is why they get muddled. Keep them apart like this: <strong>etik is the reasoning, moral is the behaviour.</strong> Someone can hold sound etik and still act badly under pressure — that's a <em>moral</em> failure, not an intellectual one. Ethics training exists so the reasoning is already done before the pressure arrives.</p>
+</div>
+
+<h3>Three kinds of rules</h3>
+<p>Every situation you meet on shift is governed by three separate rule systems at once. They usually agree. The interesting moments are when they don't.</p>
+
+<figure>
+<svg viewBox="0 0 700 250" role="img" aria-label="Venn diagram of formal law, socially governed rules and personal moral">
+  <circle cx="270" cy="105" r="92" fill="var(--warn)" opacity=".16"/>
+  <circle cx="420" cy="105" r="92" fill="var(--sw)" opacity=".16"/>
+  <circle cx="345" cy="168" r="92" fill="var(--rem)" opacity=".16"/>
+  <circle cx="270" cy="105" r="92" fill="none" stroke="var(--warn)" stroke-width="1.8"/>
+  <circle cx="420" cy="105" r="92" fill="none" stroke="var(--sw)" stroke-width="1.8"/>
+  <circle cx="345" cy="168" r="92" fill="none" stroke="var(--rem)" stroke-width="1.8"/>
+  <text data-t="d9.1" x="222" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="var(--warn)">FORMELL LAG</text>
+  <text data-t="d9.2" x="222" y="72" text-anchor="middle" font-size="9" fill="var(--ink-soft)">courts enforce</text>
+  <text data-t="d9.3" x="470" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="var(--sw)">SOCIALT STYRDA</text>
+  <text data-t="d9.4" x="470" y="72" text-anchor="middle" font-size="9" fill="var(--ink-soft)">the group enforces</text>
+  <text data-t="d9.5" x="345" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="var(--rem)">PERSONLIG MORAL</text>
+  <text data-t="d9.6" x="345" y="242" text-anchor="middle" font-size="9" fill="var(--ink-soft)">you enforce</text>
+  <text data-t="d9.7" x="345" y="122" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">easy</text>
+  <text data-t="d9.8" x="345" y="136" text-anchor="middle" font-size="9" fill="var(--ink-soft)">all three agree</text>
+</svg>
+<figcaption>The overlap is where the job is easy. Ethics is the skill of handling the parts that don't overlap.</figcaption>
+</figure>
+
+<div class="tw"><table class="plain">
+<thead><tr><th></th><th>Formell lag</th><th>Socialt styrda regler</th><th>Personlig moral</th></tr></thead>
+<tbody>
+<tr><td><strong>Comes from</strong></td><td>Parliament &amp; authorities — <code>BrB</code>, <code>RB</code>, FAP 573-1, your <span class="sv">bevakningsinstruktion</span></td><td>The group: colleagues, the client's site, society at large</td><td>Your own upbringing, conscience, values</td></tr>
+<tr><td><strong>Written down?</strong></td><td>Yes</td><td>Rarely — you learn it by watching</td><td>No</td></tr>
+<tr><td><strong>Enforced by</strong></td><td>Courts, employer, Länsstyrelsen</td><td>Social pressure: reputation, exclusion, complaints</td><td>Yourself — guilt, self-respect</td></tr>
+<tr><td><strong>If you break it</strong></td><td>Fine, prison, dismissal, <strong>lost godkännande</strong></td><td>Frozen out, taken off the site, informal discipline</td><td>You live with it</td></tr>
+<tr><td><strong>Guard example</strong></td><td>Detaining someone outside <code>RB 24:7</code> — that's <span class="sv">olaga frihetsberövande</span></td><td>Discussing an incident loudly in the lunchroom; not relieving a colleague on time</td><td>Letting a hungry shoplifter go because it "felt right"</td></tr>
+</tbody></table></div>
+
+<div class="cal warn">
+<p><span class="lab">Where they pull apart</span> — Law is the <strong>floor, not the ceiling.</strong> Something can be perfectly legal and still be wrong (technically-correct rudeness; filming someone because you can). And a socially governed rule can push you <em>toward</em> something unlawful — "everyone here does it", "the last guard always cuffed them". <strong>"Everyone does it" is never a defence.</strong> Your <span class="sv">godkännande</span> is personal, your liability is personal, and so is your report.</p>
+</div>
+
+<h3>Three ways to judge an action</h3>
+<p>Same act, three different questions you can ask about it. Swedish course material calls these the three <span class="sv">etiska modeller</span> — all three turn up in scenario questions.</p>
+
+<figure>
+<svg viewBox="0 0 700 200" role="img" aria-label="Three ethical models — intention, consequence and duty">
+  <rect x="12" y="18" width="215" height="128" rx="10" fill="var(--idea-bg)" stroke="var(--idea)" stroke-width="1.8"/>
+  <text data-t="d10.1" x="119" y="44" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--idea)">SINNELAGSETIK</text>
+  <text data-t="d10.2" x="119" y="60" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">avsikt · varför · orsak</text>
+  <text data-t="d10.3" x="119" y="88" text-anchor="middle" font-size="15" font-weight="700" fill="var(--ink)">Why?</text>
+  <text data-t="d10.4" x="119" y="112" text-anchor="middle" font-size="10" fill="var(--ink-soft)">judges the act by</text>
+  <text data-t="d10.5" x="119" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">the intention behind it</text>
+
+  <rect x="242" y="18" width="215" height="128" rx="10" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.8"/>
+  <text data-t="d10.6" x="349" y="44" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--warn)">KONSEKVENSETIK</text>
+  <text data-t="d10.7" x="349" y="60" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">effekten av handlingen</text>
+  <text data-t="d10.8" x="349" y="88" text-anchor="middle" font-size="15" font-weight="700" fill="var(--ink)">What happens?</text>
+  <text data-t="d10.9" x="349" y="112" text-anchor="middle" font-size="10" fill="var(--ink-soft)">judges the act by</text>
+  <text data-t="d10.10" x="349" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">the effect it produces</text>
+
+  <rect x="472" y="18" width="215" height="128" rx="10" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.8"/>
+  <text data-t="d10.11" x="579" y="44" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--rem)">PLIKTETIK</text>
+  <text data-t="d10.12" x="579" y="60" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">plikt · duty</text>
+  <text data-t="d10.13" x="579" y="88" text-anchor="middle" font-size="15" font-weight="700" fill="var(--ink)">What's the rule?</text>
+  <text data-t="d10.14" x="579" y="112" text-anchor="middle" font-size="10" fill="var(--ink-soft)">judges the act by</text>
+  <text data-t="d10.15" x="579" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="var(--ink)">duty itself</text>
+
+  <rect x="12" y="164" width="675" height="28" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.3"/>
+  <text data-t="d10.16" x="349" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">Memory hook — Why? · What happens? · What's the rule?</text>
+</svg>
+<figcaption>Most real dilemmas feel hard precisely because the three lenses disagree.</figcaption>
+</figure>
+
+<div class="tw"><table>
+<thead><tr><th>Modell</th><th>Judges by</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Sinnelagsetik <span class="sv">(avsikt · varför · orsak)</span></td><td>The intention behind it</td><td>A starving child steals an apple to survive — we understand it, the motive is need. A billionaire steals the same apple: same act, but the motive isn't need, so we judge it differently</td></tr>
+<tr><td>Konsekvensetik</td><td>The effect it produces</td><td>Drivers slow down when a speed camera appears — behaviour follows consequences. Judge the act by what it actually causes, not by the rule it obeys</td></tr>
+<tr><td>Pliktetik</td><td>Duty itself</td><td>You do the right thing <em>because it is the right thing</em> — whether or not anyone is watching, and whatever it costs you</td></tr>
+</tbody></table></div>
+
+<h4>One scenario, three lenses</h4>
+<p>You catch someone shoplifting baby formula:</p>
+<ul>
+<li><strong>Avsikt</strong> — the motive looks like need, not greed. That should change your <em>tone</em>, your patience, how you speak to them</li>
+<li><strong>Konsekvens</strong> — what outcome actually helps here? A proportionate handover, not a spectacle in front of the shop</li>
+<li><strong>Plikt</strong> — <code>RB 24:7</code> defines what you may do, and your <span class="sv">bevakningsinstruktion</span> defines what you must report. That doesn't bend because you feel sympathy</li>
+</ul>
+
+<div class="cal warn">
+<p><span class="lab">How a väktare holds all three</span> — <strong>Pliktetik sets the floor: law and instruction are not negotiable.</strong> Intent and consequence then shape <em>how</em> you carry the duty out — your manner, your force, your discretion within the rules. Sympathy adjusts the <strong>manner</strong>, never the <strong>legality</strong>. An examiner marking a scenario wants both halves: correct legal action, humane delivery.</p>
+</div>
+
+<h3>Working through a dilemma</h3>
+<div class="cal rem">
+<p><span class="lab">Six questions, in this order</span></p>
+<ol>
+<li><strong>Is it lawful?</strong> If no, stop — nothing below rescues an unlawful act.</li>
+<li><strong>Is it inside my assignment?</strong> <span class="sv">Bevakningsinstruktion</span>, FAP 573-1 — authority you weren't given isn't yours to use.</li>
+<li><strong>Whose interest does this serve?</strong> Client, public, or <em>me</em>? If the honest answer is "me", stop.</li>
+<li><strong>Would it survive daylight?</strong> Could I describe this action in plain words to my supervisor — in a written report — in court?</li>
+<li><strong>Would I do the same for anyone else?</strong> Swap the person's ethnicity, age, accent, clothing; if your answer changes, that's not judgement, it's bias.</li>
+<li><strong>Act — then record it accurately.</strong> Facts, not opinions.</li>
+</ol>
+</div>
+
+<div class="cal idea">
+<p><span class="lab">Ethics filter vs legal filter</span> — The six questions above are the <em>ethical</em> filter. The <strong>five principles</strong> in §02b are the <em>legal</em> one. Run the legal five first — they decide whether you may act at all; ethics then decides <em>how</em> you act.</p>
+</div>
+
+<p>The everyday ethics of the job come down to three recurring duties: <strong>tystnadsplikt</strong> (what you learn on assignment stays there — §01), <strong>bemötande</strong> (how you treat people, including the ones you're removing), and <strong>opartiskhet</strong> (impartiality — no private grudges, no favours, no discounts for friends).</p>
+
+<div class="cal rem">
+<p><span class="lab">The exam's favourite instinct</span> — Professionalism = <strong>lawful, impartial, respectful, discreet.</strong> When a scenario offers a "tough" response vs a "measured" one, the calm, rights-respecting answer is almost always correct. Never abuse the small authority you have.</p>
+</div>
+
+<p><span class="tag">Connects to</span> §02b the five principles (the legal version of the same discipline) · §08 discrimination (the impartiality question in legal form) · §01 fundamental freedoms · §09 conflict management (de-escalation <em>is</em> applied ethics).</p>
+</section>
+
+<!-- ============ 08 ============ -->
+<section id="s08">
+<h2>08 · Discrimination &amp; behaviour</h2>
+<p class="lede">Olaga diskriminering och mänskliga beteenden <span class="hours">~4 h</span></p>
+<ul>
+<li><strong>Olaga diskriminering</strong> — a crime to treat someone unfavourably in service on a protected ground.</li>
+<li><strong>Protected grounds</strong> (<span class="sv">diskrimineringsgrunder</span>): sex, transgender identity/expression, ethnicity, religion/belief, disability, sexual orientation, age.</li>
+</ul>
+<div class="cal rem">
+<p><span class="lab">One line to carry</span> — <strong>Judge behaviour and facts — never identity or appearance.</strong> Reading human behaviour under stress (fear, aggression, intoxication) is the bridge into conflict management.</p>
+</div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section id="s09">
+<h2>09 · Conflict &amp; self-protection</h2>
+<p class="lede">Konflikthantering och självskydd <span class="hours">~8 h · practical</span></p>
+<p><strong>Konflikttrappan</strong> — conflict <em>escalates</em> step by step, so aim every move at stepping <strong>down</strong>.</p>
+
+<figure>
+<svg viewBox="0 0 700 240" role="img" aria-label="The conflict staircase, escalating in five steps">
+  <g fill="var(--accent)">
+    <rect x="40" y="192" width="118" height="36" rx="5" opacity=".22"/>
+    <rect x="158" y="156" width="118" height="72" rx="5" opacity=".34"/>
+    <rect x="276" y="120" width="118" height="108" rx="5" opacity=".46"/>
+    <rect x="394" y="84" width="118" height="144" rx="5" opacity=".58"/>
+    <rect x="512" y="48" width="118" height="180" rx="5" opacity=".72"/>
+  </g>
+  <text data-t="d11.1" x="99" y="215" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">Calm talk</text>
+  <text data-t="d11.2" x="217" y="180" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">Disagreement</text>
+  <text data-t="d11.3" x="335" y="144" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">Raised voices</text>
+  <text data-t="d11.4" x="453" y="108" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">Threats</text>
+  <text data-t="d11.5" x="571" y="72" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fff">Physical</text>
+  <path d="M 600 34 L 120 34" stroke="var(--rem)" stroke-width="2" marker-end="url(#ar4)"/>
+  <defs><marker id="ar4" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="var(--rem)"/></marker></defs>
+  <text data-t="d11.6" x="360" y="26" text-anchor="middle" font-size="11" font-weight="700" fill="var(--rem)">your job: step it back DOWN — calm voice · distance · listening · a way out</text>
+</svg>
+<figcaption>Every rung you climb makes the next one easier to reach. De-escalation means deliberately moving left.</figcaption>
+</figure>
+
+<div class="cal idea">
+<p><span class="lab">On the mat</span> — Physical <span class="sv">självskydd</span> is the last resort, and only ever within <em>nödvärn</em> limits (defensible force, never retaliation). Follow the instructor's technique — it's not sparring or an MMA cage. Keep distance, don't get cornered, call for backup early.</p>
+</div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section id="s10">
+<h2>10 · Handcuffs</h2>
+<p class="lede">Handfängsel <span class="hours">~4 h · practical</span></p>
+<p>Three gates must <strong>all</strong> be present before you cuff someone:</p>
+
+<figure>
+<svg viewBox="0 0 700 130" role="img" aria-label="Three conditions that must all be met before handcuffing">
+  <rect x="14" y="20" width="205" height="62" rx="9" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"/>
+  <text data-t="d12.1" x="116" y="42" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--accent)">1 · LAWFUL BASIS</text>
+  <text data-t="d12.2" x="116" y="62" text-anchor="middle" font-size="10.5" fill="var(--ink)">a valid envarsgripande</text>
+  <text data-t="d12.3" x="228" y="57" text-anchor="middle" font-size="17" font-weight="700" fill="var(--ink-soft)">+</text>
+  <rect x="240" y="20" width="205" height="62" rx="9" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"/>
+  <text data-t="d12.4" x="342" y="42" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--accent)">2 · NECESSITY</text>
+  <text data-t="d12.5" x="342" y="62" text-anchor="middle" font-size="10.5" fill="var(--ink)">violent / real flight risk</text>
+  <text data-t="d12.6" x="454" y="57" text-anchor="middle" font-size="17" font-weight="700" fill="var(--ink-soft)">+</text>
+  <rect x="466" y="20" width="220" height="62" rx="9" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"/>
+  <text data-t="d12.7" x="576" y="42" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--accent)">3 · PROPORTIONATE</text>
+  <text data-t="d12.8" x="576" y="62" text-anchor="middle" font-size="10.5" fill="var(--ink)">the minimum needed</text>
+  <rect x="14" y="94" width="672" height="26" rx="6" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.2"/>
+  <text data-t="d12.9" x="350" y="111" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--warn)">Miss any one and cuffing is assault or unlawful deprivation of liberty</text>
+</svg>
+</figure>
+
+<div class="cal warn">
+<p>Cuffing is <strong>coercion</strong> — never for convenience. Then a <strong>duty of care</strong>: monitor the person, don't leave them in a dangerous position, hand to police promptly. Wrongful cuffing can itself be assault or unlawful deprivation of liberty.</p>
+</div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section id="s11">
+<h2>11 · Emergency first aid</h2>
+<p class="lede">Akutsjukvård / HLR <span class="hours">~6 h · practical · follows Svenska HLR-rådet</span></p>
+
+<figure>
+<svg viewBox="0 0 700 200" role="img" aria-label="Adult CPR decision flow">
+  <rect x="8" y="26" width="140" height="56" rx="9" fill="var(--panel)" stroke="var(--line)" stroke-width="1.6"/>
+  <text data-t="d13.1" x="78" y="49" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">Unresponsive?</text>
+  <text data-t="d13.2" x="78" y="67" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">shake &amp; shout</text>
+  <path d="M 150 54 L 182 54" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <rect x="187" y="20" width="170" height="68" rx="9" fill="var(--panel)" stroke="var(--line)" stroke-width="1.6"/>
+  <text data-t="d13.3" x="272" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">Breathing normally?</text>
+  <text data-t="d13.4" x="272" y="60" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">slow, gasping or</text>
+  <text data-t="d13.5" x="272" y="74" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">not at all = NO</text>
+  <path d="M 359 54 L 391 54" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <text data-t="d13.6" x="375" y="44" text-anchor="middle" font-size="9" font-weight="700" fill="var(--warn)">NO</text>
+  <rect x="396" y="26" width="140" height="56" rx="9" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="1.8"/>
+  <text data-t="d13.7" x="466" y="49" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--warn)">CALL 112</text>
+  <text data-t="d13.8" x="466" y="67" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">alarm first</text>
+  <path d="M 538 54 L 570 54" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <rect x="575" y="26" width="115" height="56" rx="9" fill="var(--rem-bg)" stroke="var(--rem)" stroke-width="1.8"/>
+  <text data-t="d13.9" x="632" y="49" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--rem)">Start CPR</text>
+  <text data-t="d13.10" x="632" y="67" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">fetch AED asap</text>
+
+  <path d="M 272 90 L 272 122" stroke="var(--ink-soft)" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <text data-t="d13.11" x="288" y="110" font-size="9" font-weight="700" fill="var(--rem)">YES</text>
+  <rect x="172" y="126" width="200" height="42" rx="9" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+  <text data-t="d13.12" x="272" y="152" text-anchor="middle" font-size="10.5" fill="var(--ink)">Recovery position · <tspan font-style="italic">stabilt sidoläge</tspan></text>
+
+  <rect x="396" y="120" width="294" height="56" rx="9" fill="var(--idea-bg)" stroke="var(--idea)" stroke-width="1.8"/>
+  <text data-t="d13.13" x="543" y="143" text-anchor="middle" font-size="14" font-weight="700" fill="var(--idea)">30 : 2 · 100–120/min · 5–6 cm</text>
+  <text data-t="d13.14" x="543" y="162" text-anchor="middle" font-size="9.5" fill="var(--ink-soft)">compressions : breaths · rate · depth</text>
+</svg>
+<figcaption>Alarm before compressions for an adult. Let the chest come fully back up each time; minimise interruptions.</figcaption>
+</figure>
+
+<div class="cal idea">
+<p><span class="lab">The numbers</span> — <strong>30 : 2</strong> (compressions : breaths) · <strong>100–120</strong> per minute · <strong>5–6 cm</strong> depth. Let the chest come fully back up each time; each breath ~1 s until the chest rises; minimise interruptions; continue until help takes over.</p>
+</div>
+
+<ul>
+<li><strong>Children:</strong> start with <strong>5 initial breaths</strong>, then continue (a layperson may use 30:2). If alone with no phone, ~1 min CPR before calling.</li>
+<li><strong>Breathing but unconscious</strong> → recovery position (<span class="sv">stabilt sidoläge</span>).</li>
+<li><strong>Severe bleeding</strong> → firm direct pressure, elevate, call 112.</li>
+<li><strong>Choking</strong> → encourage coughing → back blows → abdominal thrusts; if they collapse, start CPR.</li>
+</ul>
+<p class="lede">This is a sensitive, real-world topic — a certified in-person HLR course (many run free) is the right place to build real confidence.</p>
+</section>
+
+<!-- ============ 12 ============ -->
+<section id="s12">
+<h2>12 · Passing the exam</h2>
+<p class="lede">Provet</p>
+<p>Final-day <strong>written test</strong> (weighted toward <span class="sv">bevakningsjuridik</span>) + <strong>practical assessment</strong> (self-protection, handcuffs, fire, first aid). Examiners reward the calm, lawful, proportionate answer.</p>
+
+<h4>High-yield facts to lock in cold</h4>
+<div class="tw"><table>
+<thead><tr><th>Topic</th><th>The fact</th></tr></thead>
+<tbody>
+<tr><td>Envarsgripande</td><td>Lives in <code>RB 24:7</code>. Needs prison in range + caught in act/fleeing + hand over promptly</td></tr>
+<tr><td>Self-defence</td><td>Fails only if <strong>clearly</strong> indefensible; necessity fails if merely indefensible</td></tr>
+<tr><td>Five principles</td><td>May I? · Why? · Must I? · Is it worth it? — with <strong>Am I fair?</strong> running before, during <em>and</em> after, not last</td></tr>
+<tr><td>Ethics models</td><td>Sinnelag = motive · Konsekvens = outcome · Plikt = rule. Duty is the floor</td></tr>
+<tr><td>CPR</td><td><strong>30:2 · 100–120/min · 5–6 cm</strong>; 112 first when unconscious &amp; not breathing normally</td></tr>
+<tr><td>Fire</td><td>Triangle = heat + fuel + oxygen. Classes <strong>A/B/C/D/F</strong>. Water only on A. CO₂ for electrical</td></tr>
+<tr><td>Authority</td><td>Guard has <strong>no police powers</strong>. Police write FAP 573-1; Länsstyrelsen authorises &amp; approves</td></tr>
+<tr><td>Path</td><td>VU1 → <strong>160 h PYT</strong> → VU2 → full licence</td></tr>
+</tbody></table></div>
+
+<h3>Quick self-test</h3>
+<details><summary>Q1 · Which law contains envarsgripande?</summary><div class="ans">Rättegångsbalken (Code of Judicial Procedure) 24:7, 2nd paragraph — <em>not</em> the Criminal Code.</div></details>
+<details><summary>Q2 · What must the offence meet for a citizen's arrest?</summary><div class="ans">Prison must be in the penalty range, and the person caught in the act or fleeing.</div></details>
+<details><summary>Q3 · What do you do immediately after detaining someone?</summary><div class="ans">Hand them to the nearest police officer promptly (<span class="sv">skyndsamt</span>).</div></details>
+<details><summary>Q4 · Someone spits at you — can you punch them back under self-defence?</summary><div class="ans">No. That would be clearly indefensible (<span class="sv">uppenbart oförsvarlig</span>).</div></details>
+<details><summary>Q5 · Nödvärn vs nöd — which has the narrower margin?</summary><div class="ans">Nöd (necessity): merely <span class="sv">oförsvarlig</span> loses protection, vs <span class="sv">uppenbart oförsvarlig</span> for self-defence.</div></details>
+<details><summary>Q6 · Name the five principles, in order.</summary><div class="ans">Legalitet · ändamål · behov · proportionalitet · objektivitet — May I? Why? Must I? Is it worth it? Am I fair?</div></details>
+<details><summary>Q7 · Etik or moral — which is the reasoning, which is the behaviour?</summary><div class="ans">Etik is the reasoning (the map); moral is the behaviour (the route you actually walked).</div></details>
+<details><summary>Q8 · Which ethical model judges an act by the intention behind it?</summary><div class="ans">Sinnelagsetik (avsikt) — the starving child and the apple. Konsekvensetik judges by outcome; pliktetik by the rule.</div></details>
+<details><summary>Q9 · You block a doorway so someone can't leave, but never touch them. Is that coercion?</summary><div class="ans">Yes — <span class="sv">indirekt tvång</span>. No physical contact is needed. If they aren't free to walk away, you're coercing, and you need a legal basis (<code>RB 24:7</code>) or it can be <span class="sv">olaga tvång</span> <code>BrB 4:4</code> / unlawful deprivation of liberty.</div></details>
+<details><summary>Q10 · Can your client or your bevakningsinstruktion give you a power?</summary><div class="ans">No. A client can't give you authority they don't have, and the instruction only limits and directs — it never creates power. Legalitetsprincipen: if you can't name the rule, you don't have it.</div></details>
+<details><summary>Q11 · CPR ratio, rate and depth for an adult?</summary><div class="ans">30:2, 100–120 per minute, 5–6 cm deep.</div></details>
+<details><summary>Q12 · Which fire class is water wrong for?</summary><div class="ans">Everything except Class A — never on liquid (B), gas (C), metal (D), fat (F) or electrical.</div></details>
+<details><summary>Q13 · What crime might you commit by wrongly detaining someone?</summary><div class="ans">Unlawful deprivation of liberty (<span class="sv">olaga frihetsberövande</span>, BrB Ch. 4).</div></details>
+
+<footer>
+<p>English study aid that simplifies Swedish course material for learning. First-aid follows current Svenska HLR-rådet guidance; fire follows SS-EN3; legal content follows the Criminal Code &amp; Code of Judicial Procedure. Always defer to the current Swedish texts, FAP 573-1, and your instructor's official compendium — that's the material you're examined on. <strong>Not legal or medical advice.</strong></p>
+</footer>
+</section>
+</main>
+</div>
+<script src="assets/i18n.sv.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

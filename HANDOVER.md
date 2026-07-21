@@ -1,0 +1,112 @@
+# VU1 Handbook — project handover
+
+## What this is
+
+An English-language study handbook for **VU1 (Väktargrundutbildning del 1)**, the first
+Swedish security-guard course, run through Väktarskolan. The user (AF) is taking the course
+and building this as he goes, feeding in what the lecturer says session by session.
+
+The deliverable is a static site (`index.html` + `assets/`) intended for GitHub Pages.
+
+## The throughline
+
+Every section ties back to one idea, and it should stay visible in anything added later:
+
+> **A väktare has no police powers.** Authority = the rights any citizen (*envar*) already
+> has, exercised with training, inside the assignment, under FAP 573-1.
+
+## House style
+
+- **Plain English, Swedish key terms kept alongside** — never drop the Swedish word; it's
+  what the exam uses.
+- Structure mirrors the 12 course subject areas, `01`–`12`. §02 is split: **02a** = the powers
+  (nödvärn, nöd, envarsgripande), **02b** = the principles that govern using them.
+- Callouts: 💡 key idea (`.cal.idea`) · ⚠️ warning (`.cal.warn`) · ✅ remember (`.cal.rem`).
+  Each opens with `<span class="lab">Label</span> — `.
+- Statute refs as inline code: `BrB 24:1`, `RB 24:7`, `RF 1:9`, `PL 19 §`.
+- Diagrams are **hand-written inline SVG** using CSS variables (`var(--accent)`, `var(--ink)`,
+  `var(--warn)`…) so they work in light mode, dark mode and print. Do not introduce an image
+  file or a charting library.
+- Tone: direct, concrete, exam-focused. Worked examples beat abstract definitions. The
+  lecturer's own examples are kept verbatim wherever possible — they're the ones that stick.
+
+## Accuracy bar
+
+Verify against sources: law → Brottsbalken / Rättegångsbalken / Regeringsformen; CPR →
+Svenska HLR-rådet; fire → SS-EN3. It is a study aid — defer to the instructor's compendium
+for anything examined, and say so where a point is contested or where a väktare's powers are
+narrower than the police's.
+
+## Where the content lives
+
+- **Source of truth: this repo.** `index.html` is edited directly.
+- A **Notion page** ("Documentation", id `3a3824d2dbd980e4a6a3c666347a6f67`, under parent
+  "Security Training With Väktarskolan") holds an earlier copy. It is **several revisions
+  behind** — it has §01–§12 including the five principles and the full §07 ethics section,
+  but **not** the tvång material, the ändamål/PL 19 material, the cashier case study, or the
+  02a/02b split. Decide whether to re-sync it or retire it.
+- Notion quirk if you do sync: adjacent tables merge into one. Separate them with a heading.
+
+## Current state
+
+**Complete:** all 12 sections. 13 inline SVG diagrams. 13-question self-test.
+Auto-generated nested sidebar with scrollspy. Section filter. Light/dark. Print stylesheet.
+Mobile drawer nav.
+
+**Recently added, in order:**
+1. §07 professional ethics expanded — etik/moral/socialt styrda regler, three kinds of rules,
+   the three etiska modeller (sinnelagsetik / konsekvensetik / pliktetik) with the lecturer's
+   apple and speed-camera examples, six-question dilemma walkthrough.
+2. §02b five principles — legalitet, ändamål, behov, proportionalitet, objektivitet.
+3. "Does the order matter?" — the lecturer's correction that **objektivitet is not step five**;
+   it runs before, during and after (the officer was being objective when deciding whether to
+   pull the car over at all). Diagram reflects this: four sequential gates over a continuous
+   objectivity band.
+4. Legalitetsprincipen in depth + **tvång** — direkt vs indirekt coercion, the three things
+   that are *not* a legal basis (client's wishes, bevakningsinstruktion, analogy).
+5. Ändamålsprincipen in depth — `PL 19 §` skyddsvisitation, the stolen-pen example
+   (searching for evidence under a safety power = wrong purpose).
+6. Case study — "the cashier who was sure": witness certainty ≠ objective knowledge; questioning
+   as indirekt tvång; and why the guard still cannot seize the man when he returns
+   (identification is police work, and `RB 24:7` needs bar gärning/flyende fot).
+
+## Swedish translation — in progress
+
+Toggle machinery is done and working. **Translated so far: Overview, §01, §02a** (91 strings).
+A banner shows in Swedish mode saying which sections are done.
+
+**Remaining tranches:** §02b → §03–§06 → §07–§12.
+
+To continue: add entries to `assets/i18n.sv.js`. The key is the element's visible text with
+whitespace collapsed and tags stripped; the value is the Swedish `innerHTML` (keep
+`<span class="lab">`, `<strong>`, `<code>` markup). Verify hit-rate before committing —
+a mistyped key silently leaves the element in English.
+
+## Architecture — pending decision
+
+`CONTENT_SCHEMA.md` designs a migration from "HTML + keyed translation overlay" to a single
+`content.json` where English and Swedish sit side by side, and the quiz and flashcards are
+generated from the same data rather than duplicating it. **Read that file before adding new
+features** — building the quiz against the current HTML would mean migrating it twice.
+
+Partially done already: SVG diagram labels now use stable `data-t="dN.i"` keys instead of
+being keyed by their English text, so they survive an English rewrite. 26 labels re-keyed.
+
+## Planned next
+
+0. **Decide on the content.json migration** (see `CONTENT_SCHEMA.md`). Do this before 2 and 3.
+1. **Finish the Swedish translation** (three tranches).
+2. **Quiz section** — multiple choice. The 13 existing self-test Q&As in §12 convert directly;
+   they need plausible distractors. Store in `data/quiz.json`.
+3. **Flashcards** — term/definition pairs for memorisation. The definition tables in §01, §02a,
+   §03 and §04 already contain these pairs, and `assets/i18n.sv.js` is effectively an
+   EN↔SV term database. Store in `data/flashcards.json`.
+4. Deploy to GitHub Pages.
+
+## Working notes
+
+- AF prefers concise, direct responses — minimal preamble, no restating what he just said.
+- He is feeding in lecture content as it happens; expect raw, partly-Swedish notes to be
+  turned into handbook sections. Ask what the lecturer's own examples were; keep them.
+- He pushes back well and corrects errors (see item 3 above) — take the correction seriously
+  and rework the model, don't just append a caveat.
