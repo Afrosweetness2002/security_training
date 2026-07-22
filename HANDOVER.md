@@ -78,6 +78,29 @@ need a matching `id="law-..."` — no need to hand-link existing `<code>` refs s
 need to touch `openLawCard()`/`closeLawCard()`.
 
 **Recently added, in order:**
+-2. **Straff detail + three new powers** — a straff-minimum explainer (general fängelse
+    minimum raised 14 days → 1 month on 2026-01-01, the biggest penalty-system reform since
+    Brottsbalken; böter minimums: 750 kr dagsböter floor, ~100–2 000 kr penningböter); the
+    crimes-relevant-to-the-job table split into Straff/Minimum/Maximum columns; two new
+    subsections — `PL 10 §` use-of-force (passivt vs aktivt motstånd, only aktivt justifies
+    force) plus `HL 4:10` handfängsel (extends Häkteslagen's cuffing rule to a fresh `RB 24:7`
+    arrest), and **laga självtäkt** (reclaiming stolen goods within 24 h of the theft — a
+    separate power from nödvärn/envarsgripande, tied back into the cashier/CCTV case study in
+    §02b). An Example column added across both the crimes table and the full statute glossary
+    (33 rows now, up from 30); `Uppenbar`/`Försvarlig` word-definitions added next to nödvärn
+    in §02a. Sourced from AF's lecture notes plus web research (`riksdagen.se`, `lagen.nu`,
+    `regeringen.se`) for the 2026 penalty-reform figures and the PL 10/HL 4:10/laga självtäkt
+    detail — flagged for compendium verification, especially the 2026 böter figures and the
+    PL 10 väktare-vs-ordningsvakt scope distinction. Fully translated to Swedish in the same
+    pass. `HL` added to `app.js`'s statute auto-link prefix list. Adding the Example column
+    broke the law-lookup popover (`openLawCard()` read `td:last-child`, which the Example
+    column now is instead of "What it covers") — fixed to `td:nth-child(2)`; caught via a
+    Playwright pass through the rendered page, not just the translation-coverage script.
+    Also fixed two long-standing dead statute refs found the same way: `BrB Ch. 17` (§02a,
+    guard-on-duty protection) didn't match the glossary's `BrB 17 kap.` slug, and `BrB Ch. 4`
+    (§02a "get it wrong" callout + §12 Q13) wasn't even wrapped in `<code>` so it was never
+    clickable — retitled to the actual provision, `BrB 4:2` (olaga frihetsberövande, fängelse
+    1–10 years / mindre grovt böter or ≤ 2 years), and added as glossary row 34.
 -1. **Laws content expansion** — participation in a crime (`BrB 23:4`: gärningsman,
     medgärningsman, anstiftare, medhjälpare); a penalty-range table for violence and
     theft/robbery (misshandel → grovt rån) framed explicitly around `RB 24:7`'s gate 1
@@ -87,7 +110,7 @@ need to touch `openLawCard()`/`closeLawCard()`.
     beteende), flagged since the reasoning isn't a clean "no fängelse" rule and hemfridsbrott/
     olaga intrång's penalty scale changed in 2022; `LUL 35 §` for apprehending an offender
     under 15 (no handcuffs — no legal basis for coercion against a child that age); `RB 27:4`
-    beslag. 15 new glossary rows (29 total). Sourced from AF's lecture notes plus web research
+    beslag. 15 new glossary rows (30 total, now 33 — see the newer entry above). Sourced from AF's lecture notes plus web research
     against `riksdagen.se`/`lagen.nu`-adjacent sources for the specific penalty ranges — still
     flagged for compendium verification per the accuracy bar, especially the six-exception
     reasoning and exactly which crimes carry a förberedelse clause.
@@ -116,7 +139,7 @@ need to touch `openLawCard()`/`closeLawCard()`.
 
 ## Swedish translation — complete
 
-Toggle machinery is done and working. **All 12 sections + the Laws view translated** (559
+Toggle machinery is done and working. **All 12 sections + the Laws view translated** (638
 strings and growing as Laws content is added), tracked
 as [GitHub issue #1](https://github.com/Afrosweetness2002/security_training/issues/1) — now
 closed. `#svnote` no longer needs a per-tranche list.

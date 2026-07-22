@@ -92,7 +92,7 @@
      already hardcodes plain <code> markup, which would wipe a link wrapper applied only
      once at load. Clicking one opens a popover card in place (see lawcard below) rather
      than navigating away — looking up one law shouldn't cost you your scroll position. */
-  var LAWRE = /^(BrB|RB|RF|PL|FAP|LUL)\b/i;
+  var LAWRE = /^(BrB|RB|RF|PL|FAP|LUL|HL)\b/i;
   function slugify(s) {
     return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   }
@@ -130,7 +130,7 @@
   function openLawCard(target, triggerEl) {
     lawcardReturnFocus = triggerEl || document.activeElement;
     var code = target.querySelector('code');
-    var desc = target.querySelector('td:last-child');
+    var desc = target.querySelector('td:nth-child(2)');
     lawcardTitle.textContent = code ? code.textContent : '';
     lawcardBody.innerHTML = desc ? desc.innerHTML : '';
     lawcardFull.onclick = function (e) {
