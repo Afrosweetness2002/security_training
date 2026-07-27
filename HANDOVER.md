@@ -78,6 +78,53 @@ need a matching `id="law-..."` — no need to hand-link existing `<code>` refs s
 need to touch `openLawCard()`/`closeLawCard()`.
 
 **Recently added, in order:**
+-4. **lagen.nu verification pass + `data/laws.json` + per-row source links** — AF flagged that
+    some glossary entries were inaccurate and asked for lagen.nu (which mirrors the official
+    riksdagen.se text) as the source of record, the underlying Swedish law text captured in
+    JSON, and every glossary row linked to its actual source document. Two parallel research
+    passes (BrB rows vs. everything else) plus a manual follow-up for `BrB 3:5`/`3:6` (missed
+    from the initial scope) fetched lagen.nu/riksdagen.se for all 39 rows. New file
+    `data/laws.json` holds one entry per row (`id`, `code`, `act`/`sfs`, `ref`, `sv_lagtext`,
+    `sources.lagen_nu`/`riksdagen`, `verified` date, `note`) — a verified source-of-record and
+    seed for quiz/flashcards, not something the page fetches at runtime (this repo still
+    renders from static HTML, per the `CONTENT_SCHEMA.md` deferral). Every glossary row's Code
+    cell now carries a small `↗` link (`a.lawsrc`, styled in `styles.css`) straight to its
+    lagen.nu chapter/paragraf anchor — additive markup only, so `openLawCard()`'s
+    `td:nth-child(2/3)` reads needed no change. Real errors caught and fixed (English +
+    Swedish): `BrB 25:3` penningböter was stated as 100–2 000 kr, actually 200–4 000 kr;
+    `BrB 8:5` rån minimum was stated as 1 year, actually 1 y 6 m; `BrB 3:6` grov misshandel
+    max was stated as 7 years, actually 6 (a separate reform proposes sharpening ~50 penalty
+    scales, targeting 2026-08-01 — flagged, not assumed); `BrB 5:1`'s "grovt förtal" penalty
+    actually belongs to `BrB 5:2`; `BrB 12:2` was labelled "Åverkan", an obsolete term — now
+    "Ringa skadegörelse"; `PL 29 §` was described as extending to ordningsvakter — it actually
+    covers Försvarsmakten guard posts, and ordningsvakter's real basis since 2024-01-01 is
+    `Lag (2023:421) om ordningsvakter`; `HL 4:10`'s extension to a fresh `RB 24:7` arrest
+    actually runs through `FAP 573-1` 9 kap. 1 §, not Häkteslagen's own text; laga självtäkt's
+    24-hour callout now notes that reclaiming property past the window can itself be
+    `BrB 8:8` egenmäktigt förfarande. The `BrB 23 kap.` liability-expansion reform, previously
+    flagged as merely proposed, is confirmed in force (23:1 since 2026-04-01, 23:2/23:4 since
+    2026-07-01) — wording updated from "verify" to "in force" throughout. New
+    `tools/check-law-sources.js` (same throwaway-but-reusable spirit as `extract-keys.js`/
+    `verify-tranche.js`) cross-checks every glossary row against `data/laws.json` — run
+    `node tools/check-law-sources.js` after touching either.
+-3. **Law-lookup popover fix + 5 new glossary rows (39 total)** — `openLawCard()` only ever
+    rendered one table column (`td:nth-child(2)`, "What it covers"); the Example column was
+    never read at all, which is what looked like "only shows an example" / "still English"
+    to a user, since a field that's never rendered can't show a translation either. Now
+    renders both, each under a label (`.lawcard-label`) tracked through a new `curLang`
+    module var since `#lawcard` sits outside `<main>` and isn't covered by the generic
+    translation pass. Also: `slugify()` stripped no diacritics, so a Swedish phrase like
+    `Laga självtäkt` could never resolve to its own `id="law-laga-sjalvtakt"` — fixed via
+    NFD-normalize + strip combining marks (`String.fromCharCode` range, not a literal
+    regex range, to dodge shell/JS re-escaping of `̀`); `LAWRE` extended to allow it as
+    a linkable phrase alongside the statute-prefix codes. Found (via a script diffing every
+    `<code>` ref's slug against every glossary id) five more dead refs with no glossary
+    row at all — `BrB 26 kap.`, `BrB 25:2`, `BrB 25:3`, `BrB 23 kap.`, `PL 29 §` — added as
+    rows 35–39, fully translated. Added a source-check line above the glossary linking to
+    riksdagen.se/lagen.nu. Verified end-to-end with a jsdom harness that actually loads
+    `index.html` + `app.js` + `i18n.sv.js` and drives clicks/lang-toggle, since no
+    chromium-cli/Playwright browser was available in this environment — `tools/` doesn't
+    have this harness checked in; recreate ad hoc if verifying similar changes again.
 -2. **Straff detail + three new powers** — a straff-minimum explainer (general fängelse
     minimum raised 14 days → 1 month on 2026-01-01, the biggest penalty-system reform since
     Brottsbalken; böter minimums: 750 kr dagsböter floor, ~100–2 000 kr penningböter); the

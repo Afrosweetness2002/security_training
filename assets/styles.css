@@ -106,6 +106,11 @@ a.lawlink{text-decoration:none; cursor:pointer}
 a.lawlink code{transition:.12s; box-shadow:0 0 0 1px color-mix(in srgb,var(--code) 45%,transparent) inset}
 a.lawlink:hover code, a.lawlink:focus-visible code{box-shadow:0 0 0 1.5px var(--code) inset}
 tr[id^="law-"]{scroll-margin-top:1.5rem}
+a.lawsrc{
+  display:inline-block; text-decoration:none; color:var(--ink-soft); font-size:.85em;
+  opacity:.65; transition:.12s;
+}
+a.lawsrc:hover, a.lawsrc:focus-visible{opacity:1; color:var(--accent)}
 
 /* ---------- callouts ---------- */
 .cal{
@@ -191,6 +196,11 @@ footer{
 #lawcard-title{font:700 1.05rem/1.3 inherit; color:var(--code); margin:0 1.8rem .6rem 0}
 #lawcard-body{font-size:.92rem; line-height:1.55; color:var(--ink)}
 #lawcard-body .tag{display:block; margin-top:.6rem}
+.lawcard-label{
+  margin:.9rem 0 .2rem; font-size:.72rem; font-weight:700; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--ink-soft);
+}
+.lawcard-label:first-child{margin-top:0}
 #lawcard-full{
   display:inline-block; margin-top:1rem; font-size:.8rem; font-weight:600;
   color:var(--accent); text-decoration:none;

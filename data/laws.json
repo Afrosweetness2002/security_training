@@ -1,0 +1,510 @@
+[
+  {
+    "id": "brb-1-1",
+    "code": "BrB 1:1",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "1 kap. 1 §",
+    "sv_lagtext": "Brott är en gärning som är beskriven i denna balk eller i annan lag eller författning och för vilken straff som sägs nedan är föreskrivet.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K1P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K1"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-1-2",
+    "code": "BrB 1:2",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "1 kap. 2 §",
+    "sv_lagtext": "En gärning ska, om inte annat är särskilt föreskrivet, anses som brott endast då den begås uppsåtligen.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K1P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K1"
+    },
+    "verified": "2026-07-24",
+    "note": "Statute also has a second sentence (self-induced intoxication is no excuse) that the handbook omits — not an error, just incomplete."
+  },
+  {
+    "id": "brb-4-2",
+    "code": "BrB 4:2",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "4 kap. 2 §",
+    "sv_lagtext": "Den som för bort eller spärrar in någon eller på annat sätt berövar honom eller henne friheten döms för olaga frihetsberövande till fängelse, lägst ett och högst tio år. Är brottet mindre grovt, döms till böter eller fängelse i högst två år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K4P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K4"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-4-4",
+    "code": "BrB 4:4",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "4 kap. 4 §",
+    "sv_lagtext": "Den som genom misshandel eller annars med våld eller genom hot om brottslig gärning tvingar någon att göra, tåla eller underlåta något döms för olaga tvång till böter eller fängelse i högst två år. Är brottet grovt, döms för grovt olaga tvång till fängelse i lägst ett och högst sex år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K4P4",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K4"
+    },
+    "verified": "2026-07-24",
+    "note": "Handbook gave no penalty range at all for this row; grovt olaga tvång tier (fängelse 1-6 yr) added."
+  },
+  {
+    "id": "brb-4-6",
+    "code": "BrB 4:6",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "4 kap. 6 §",
+    "sv_lagtext": "Den som olovligen tränger in eller stannar kvar i någon annans bostad döms för hemfridsbrott; i annat fall (byggnad, fartyg, gårdsplan) för olaga intrång — böter eller fängelse i högst ett år. Är brottet grovt, fängelse i lägst sex månader och högst tre år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K4P6",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K4"
+    },
+    "verified": "2026-07-24",
+    "note": "2022 penalty-scale change (Lag 2022:661) confirmed real; handbook's figures match exactly."
+  },
+  {
+    "id": "brb-5-1",
+    "code": "BrB 5:1",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "5 kap. 1 §",
+    "sv_lagtext": "Den som utpekar någon såsom brottslig eller klandervärd i sitt levnadssätt eller annars lämnar uppgift som är ägnad att utsätta denne för andras missaktning döms för förtal till böter.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K5P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K5"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED: handbook attributed 'grovt förtal: fängelse ≤ 2 years' to 5:1. That's actually BrB 5:2, a separate paragraf (5:1 itself is böter-only). Row now cites 5:2 explicitly for the grovt tier."
+  },
+  {
+    "id": "brb-5-3",
+    "code": "BrB 5:3",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "5 kap. 3 §",
+    "sv_lagtext": "Den som riktar beskyllning, nedsättande uttalande eller förödmjukande beteende mot någon annan döms, om gärningen är ägnad att kränka den andres självkänsla eller värdighet, för förolämpning till böter. Är brottet grovt, till böter eller fängelse i högst sex månader.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K5P3",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K5"
+    },
+    "verified": "2026-07-24",
+    "note": "Clarified that plain förolämpning is böter-only and fängelse ≤6 months applies only to the grovt tier. lagen.nu flags this exact paragraph text as expiring 2026-08-01 (replacement text not yet published) — recheck after that date."
+  },
+  {
+    "id": "brb-8-1",
+    "code": "BrB 8:1",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "8 kap. 1 §",
+    "sv_lagtext": "Den som olovligen tager vad annan tillhör med uppsåt att tillägna sig det, döms, om tillgreppet innebär skada, för stöld till fängelse i högst två år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K8P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K8"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-8-2",
+    "code": "BrB 8:2",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "8 kap. 2 §",
+    "sv_lagtext": "Är brott som avses i 1 § med hänsyn till det tillgripnas värde och övriga omständigheter att anse som ringa, döms för ringa stöld till böter eller fängelse i högst sex månader.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K8P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K8"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-8-4",
+    "code": "BrB 8:4",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "8 kap. 4 §",
+    "sv_lagtext": "Är brott som avses i 1 § att anse som grovt, döms för grov stöld till fängelse i lägst sex månader och högst sex år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K8P4",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K8"
+    },
+    "verified": "2026-07-24",
+    "note": "Range (6mo-6yr) confirmed current. lagen.nu flags this paragraph as expiring 2026-08-01 as part of the broader 'sharpened penalty scales' reform (~50 scales, Prop. on double sentences/sharpened scales) — replacement text not yet published, recheck after that date."
+  },
+  {
+    "id": "brb-8-5",
+    "code": "BrB 8:5",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "8 kap. 5 §",
+    "sv_lagtext": "Den som med våld på person eller med hot som innebär eller för den hotade framstår som trängande fara begår stöld... döms för rån till fängelse i lägst ett år och sex månader och högst sex år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K8P5",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K8"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED: handbook said minimum 1 year; since Lag 2023:257 the actual minimum is 1 year 6 months."
+  },
+  {
+    "id": "brb-8-6",
+    "code": "BrB 8:6",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "8 kap. 6 §",
+    "sv_lagtext": "Om brott som avses i 5 § är grovt, döms för grovt rån till fängelse i lägst fem och högst tio år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K8P6",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K8"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-12-2",
+    "code": "BrB 12:2",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "12 kap. 2 §",
+    "sv_lagtext": "Är brott som avses i 1 § (skadegörelse) med hänsyn till skadans obetydlighet och övriga omständigheter att anse som ringa, döms för ringa skadegörelse till böter eller fängelse i högst sex månader.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K12P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K12"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED: handbook labelled this row 'Åverkan', an obsolete pre-reform term. The chapter is now 'Om skadegörelsebrott' and the operative term is 'ringa skadegörelse'. Penalty figure was already correct."
+  },
+  {
+    "id": "brb-16-16",
+    "code": "BrB 16:16",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "16 kap. 16 §",
+    "sv_lagtext": "Den som för oljud på allmän plats eller annars offentligen beter sig på ett sätt som är ägnat att väcka förargelse hos allmänheten, döms för förargelseväckande beteende till penningböter.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K16P16",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K16"
+    },
+    "verified": "2026-07-24",
+    "note": "Precision fix: statute specifies penningböter, not generic böter."
+  },
+  {
+    "id": "brb-17-kap",
+    "code": "BrB 17:1, 17:5",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "17 kap. 1 § (grundbrott), 17 kap. 5 § (utsträckning)",
+    "sv_lagtext": "17:1: Den som med våld eller hot om brottslig gärning angriper en tjänsteman vid dennes myndighetsutövning döms för våld eller hot mot tjänsteman till böter eller fängelse i högst tre år; är brottet grovt, fängelse i lägst ett år sex månader och högst åtta år. 17:5 utsträcker samma skydd till den som enligt särskild föreskrift ska ha samma skydd som är förenat med myndighetsutövning, och till vissa samhällsnyttiga funktioner.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K17P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K17"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED: handbook cited the whole chapter generically. Retitled to the specific paragrafer: the base offence is 17:1 (tjänsteman only — a väktare is not a tjänsteman); the extension a väktare might reach runs through 17:5's 'särskild föreskrift' clause, which in practice depends on certification, not automatic for any väktare."
+  },
+  {
+    "id": "brb-23-1",
+    "code": "BrB 23:1",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "23 kap. 1 §",
+    "sv_lagtext": "Den som har påbörjat utförandet av ett visst brott, utan att brottet fullbordats, döms för försök till brottet om sådant ansvar är särskilt föreskrivet och det har funnits fara för att handlingen skulle leda till att brottet fullbordas (eller sådan fara varit utesluten endast på grund av tillfälliga omständigheter, eller uteslutits genom en myndighets brottsbekämpande åtgärd).",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K23P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K23"
+    },
+    "verified": "2026-07-24",
+    "note": "This is the paragraf amended by the liability-expansion reform (Lag 2026:93), in force since 2026-04-01 — already in effect as of today, not merely proposed."
+  },
+  {
+    "id": "brb-23-2",
+    "code": "BrB 23:2",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "23 kap. 2 §",
+    "sv_lagtext": "Den som inte har gjort sig skyldig till fullbordat brott eller försök döms, om sådant ansvar är särskilt föreskrivet, för förberedelse (befattning med hjälpmedel eller betalning för brott) eller för stämpling (överenskommelse att utföra en gärning, eller anstiftansförsök) till brottet, om faran för fullbordan inte var ringa.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K23P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K23"
+    },
+    "verified": "2026-07-24",
+    "note": "Amended by Lag 2026:94, in force since 2026-07-01 — already in effect as of today, not merely proposed."
+  },
+  {
+    "id": "brb-24-1",
+    "code": "BrB 24:1",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "24 kap. 1 §",
+    "sv_lagtext": "En gärning som någon begår i nödvärn utgör brott endast om den, med hänsyn till angreppets beskaffenhet, det angripnas betydelse och omständigheterna i övrigt, är uppenbart oförsvarlig. Nödvärnsrätt föreligger bl.a. mot ett påbörjat eller överhängande brottsligt angrepp, mot den som hindrar återtagande av egendom på bar gärning, och mot den som olovligen trängt in i eller vägrar lämna en bostad.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K24P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K24"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-24-2",
+    "code": "BrB 24:2",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "24 kap. 2 §",
+    "sv_lagtext": "Rymmer eller gör motstånd med våld eller hot om våld den som är intagen, häktad, anhållen eller annars berövad friheten mot den som håller honom under uppsikt, får försvarligt våld användas för att hindra rymning eller upprätthålla ordning. Detsamma gäller om någon annan gör motstånd i ett sådant fall.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K24P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K24"
+    },
+    "verified": "2026-07-24",
+    "note": "A further amendment (Lag 2025:1269) took effect 2026-07-01; substance for this teaching point is unlikely to have changed but wording should be spot-checked."
+  },
+  {
+    "id": "brb-24-4",
+    "code": "BrB 24:4",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "24 kap. 4 §",
+    "sv_lagtext": "En gärning som någon begår i nöd utgör brott endast om den, med hänsyn till farans beskaffenhet, skadan och omständigheterna i övrigt, är oförsvarlig. Nöd föreligger när fara hotar liv, hälsa, egendom eller annat viktigt av rättsordningen skyddat intresse.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K24P4",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K24"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-24-6",
+    "code": "BrB 24:6",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "24 kap. 6 §",
+    "sv_lagtext": "Om någon i fall där 24 kap. 1–5 §§ är tillämpliga har gjort mer än vad som medges, ska han eller hon ändå vara fri från ansvar om omständigheterna var sådana att han eller hon svårligen kunde besinna sig.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K24P6",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K24"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-25-2",
+    "code": "BrB 25:2",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "25 kap. 2 §",
+    "sv_lagtext": "Dagsböter ska bestämmas till ett antal av minst trettio och högst etthundrafemtio. Varje dagsbot fastställs till femtio till ettusen kronor efter den tilltalades ekonomiska förhållanden. Minsta bötesbelopp är sjuhundrafemtio kronor.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K25P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K25"
+    },
+    "verified": "2026-07-24",
+    "note": "30-150 dagsböter, 50-1000 kr each, 750 kr floor all confirmed. The '200 dagsböter for several crimes sentenced together' figure is correct but technically comes from 25:6, not 25:2 — sourcing nuance, not an error."
+  },
+  {
+    "id": "brb-25-3",
+    "code": "BrB 25:3",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "25 kap. 3 §",
+    "sv_lagtext": "Penningböter ska bestämmas till lägst tvåhundra kronor och högst fyratusen kronor. Om ett lägre högsta belopp är särskilt föreskrivet, gäller dock detta.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K25P3",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K25"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED: handbook said 'roughly 100-2,000 kr' (stale, pre-2006 figures). Current range since Lag 2006:574 is 200-4,000 kr."
+  },
+  {
+    "id": "brb-26-kap",
+    "code": "BrB 26 kap.",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "26 kap. 1 §",
+    "sv_lagtext": "Fängelse döms ut på viss tid eller på livstid. Fängelse på viss tid får inte understiga en månad och inte överstiga tio år (i vissa fall upp till arton år).",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K26P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K26"
+    },
+    "verified": "2026-07-24",
+    "note": "CONFIRMED: general fängelse minimum raised from 14 dagar to 1 månad, effective 2026-01-01 (Prop. 2025/26:34). A further amendment to this same paragraph takes effect 2026-08-01 as part of the broader sentencing reform; its content wasn't published yet at verification time — recheck after that date."
+  },
+  {
+    "id": "brb-23-kap",
+    "code": "BrB 23 kap.",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "23 kap. (see 23:1, 23:2, 23:4 above)",
+    "sv_lagtext": "23 kap. reglerar försök (23:1), förberedelse/stämpling (23:2), frivilligt tillbakaträdande (23:3) och medverkan (23:4). Genom Lag 2026:93 (23:1) och Lag 2026:94 (23:2–23:5, 23:7) utvidgades straffansvaret — bland annat genom att fara för fullbordan som uteslutits av en myndighets brottsbekämpande åtgärd numera uttryckligen inte hindrar ansvar för försök, förberedelse eller stämpling.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K23",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K23"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED framing: the handbook described this as 'a proposed expansion... due 2026-04-01/07-01 — verify.' It has already taken effect: 23:1 since 2026-04-01, 23:2/23:4 (and others) since 2026-07-01, both before today. Wording updated from 'proposed/pending' to 'in force'."
+  },
+  {
+    "id": "brb-23-4",
+    "code": "BrB 23:4",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "23 kap. 4 §",
+    "sv_lagtext": "Om ansvar är föreskrivet för en viss gärning ska inte bara den som utfört gärningen utan även den som främjat den med råd eller dåd dömas. Den som inte är att anse som gärningsman döms, om han eller hon förmått annan till utförandet, för anstiftan, och annars för medhjälp.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K23P4",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K23"
+    },
+    "verified": "2026-07-24",
+    "note": "Statute text uses gärningsman/anstiftare/medhjälpare; 'medgärningsman' (co-principal) is standard legal doctrine implicit in 'den som utfört gärningen' for joint actors, not a separate statutory term — teaching simplification, not an error. Amended by Lag 2026:94, in force since 2026-07-01."
+  },
+  {
+    "id": "brb-3-5",
+    "code": "BrB 3:5",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "3 kap. 5 §",
+    "sv_lagtext": "Den som tillfogar en annan person kroppsskada, sjukdom eller smärta eller försätter honom eller henne i vanmakt eller något annat sådant tillstånd, döms för misshandel till fängelse i högst två år. Är brottet ringa, till böter eller fängelse i högst sex månader.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K3P5",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K3"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "brb-3-6",
+    "code": "BrB 3:6",
+    "act": { "name": "Brottsbalk", "sfs": "1962:700" },
+    "ref": "3 kap. 6 §",
+    "sv_lagtext": "Är brott som avses i 5 § att anse som grovt, döms för grov misshandel till fängelse i lägst ett år sex månader och högst sex år. Är brottet synnerligen grovt, till fängelse i lägst fem och högst tio år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K3P6",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K3"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED: handbook said the max was 7 years; the current (today's) maximum for grov misshandel is 6 years — 7 years does not yet exist in force. A government reform announced 2026-04 proposes sharpening ~50 penalty scales, including aggravated assault, with a bill targeting 2026-08-01 — one week after this verification date. lagen.nu shows several neighbouring BrB paragraphs already flagged as expiring 2026-08-01, consistent with that package. Recheck this figure after 2026-08-01; do not assume 7 years is current before then."
+  },
+  {
+    "id": "rb-24-7",
+    "code": "RB 24:7",
+    "act": { "name": "Rättegångsbalk", "sfs": "1942:740" },
+    "ref": "24 kap. 7 §",
+    "sv_lagtext": "Om den som har begått ett brott, på vilket fängelse kan följa, påträffas på bar gärning eller flyende fot, får han eller hon gripas av envar (andra stycket).",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1942:740#K24P7",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/#K24"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "rb-27-4",
+    "code": "RB 27:4",
+    "act": { "name": "Rättegångsbalk", "sfs": "1942:740" },
+    "ref": "27 kap. 4 §",
+    "sv_lagtext": "Den som med laga rätt griper eller anhåller en misstänkt, eller verkställer häktning, husrannsakan eller kroppsvisitation, får ta föremål som därvid påträffas i beslag.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1942:740#K27P4",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/#K27"
+    },
+    "verified": "2026-07-24",
+    "note": "Statute's scope is slightly broader than the handbook implies (also covers husrannsakan); the formal beslag decision is ultimately for undersökningsledare/åklagare — handbook's summary is a defensible simplification."
+  },
+  {
+    "id": "rf-1-1",
+    "code": "RF 1:1",
+    "act": { "name": "Regeringsformen", "sfs": "1974:152" },
+    "ref": "1 kap. 1 §",
+    "sv_lagtext": "All offentlig makt i Sverige utgår från folket. Den svenska folkstyrelsen bygger på fri åsiktsbildning och på allmän och lika rösträtt. Den förverkligas genom ett representativt och parlamentariskt statsskick och genom kommunal självstyrelse. Den offentliga makten utövas under lagarna.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1974:152#K1P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/kungorelse-1974152-om-beslutad-ny_sfs-1974-152/#K1"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "rf-1-9",
+    "code": "RF 1:9",
+    "act": { "name": "Regeringsformen", "sfs": "1974:152" },
+    "ref": "1 kap. 9 §",
+    "sv_lagtext": "Domstolar samt förvaltningsmyndigheter och andra som fullgör offentliga förvaltningsuppgifter ska i sin verksamhet beakta allas likhet inför lagen samt iaktta saklighet och opartiskhet.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1974:152#K1P9",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/kungorelse-1974152-om-beslutad-ny_sfs-1974-152/#K1"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "rf-2-10",
+    "code": "RF 2:10",
+    "act": { "name": "Regeringsformen", "sfs": "1974:152" },
+    "ref": "2 kap. 10 §",
+    "sv_lagtext": "Ingen får dömas till straff eller annan brottspåföljd för en gärning som inte var belagd med brottspåföljd när den begicks.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1974:152#K2P10",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/kungorelse-1974152-om-beslutad-ny_sfs-1974-152/#K2"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "pl-19",
+    "code": "PL 19 §",
+    "act": { "name": "Polislag", "sfs": "1984:387" },
+    "ref": "19 §",
+    "sv_lagtext": "En polisman som med laga stöd griper eller annars omhändertar eller avlägsnar någon får i anslutning till ingripandet kroppsvisitera denne i den utsträckning som är nödvändig av säkerhetsskäl, för att söka efter vapen eller andra farliga föremål.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1984:387#P19",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/polislag-1984387_sfs-1984-387/"
+    },
+    "verified": "2026-07-24",
+    "note": null
+  },
+  {
+    "id": "pl-10",
+    "code": "PL 10 §",
+    "act": { "name": "Polislag", "sfs": "1984:387" },
+    "ref": "10 §",
+    "sv_lagtext": "En polisman får, i den mån andra medel är otillräckliga och det med hänsyn till omständigheterna är försvarligt, använda våld för att genomföra en tjänsteåtgärd, om han eller hon möts av motstånd eller den som ska omhändertas eller gripas flyr, med flera angivna grunder.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1984:387#P10",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/polislag-1984387_sfs-1984-387/"
+    },
+    "verified": "2026-07-24",
+    "note": "Polislagen (1984:387) confirmed still in force under this number, not renumbered. 10 § itself was amended very recently (Lag 2025:1064, in force 2026-07-01 — three weeks before this verification) as firearms-use rules were split into a new companion law. The general force framework the handbook describes is intact, but the exact current subsection wording should be spot-checked given how recent the change is."
+  },
+  {
+    "id": "pl-29",
+    "code": "PL 29 §",
+    "act": { "name": "Polislag", "sfs": "1984:387" },
+    "ref": "29 §",
+    "sv_lagtext": "Det som föreskrivs i 10 § första stycket 1, 2 och 4 gäller även en sådan vaktpost eller någon annan som vid Försvarsmakten tjänstgör för bevakning eller för att upprätthålla ordning.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1984:387#P29",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/polislag-1984387_sfs-1984-387/",
+      "lagen_nu_ordningsvakter": "https://lagen.nu/2023:421"
+    },
+    "verified": "2026-07-24",
+    "note": "FIXED, real error: handbook claimed 'PL 29 § extends PL 10 §'s use-of-force rule to certified ordningsvakter.' Current PL 29 § text (confirmed above) actually concerns Försvarsmakten guard posts (vaktposter), not ordningsvakter at all. Ordningsvakters own use-of-force basis moved to Lag (2023:421) om ordningsvakter on 2024-01-01 (secondary source link included). Primary source link points at the real PL 29 § text being corrected; the row keeps id 'law-pl-29' for compatibility with existing statute auto-links. Exact cross-referenced paragraf numbers inside 2023:421 should be pinned by opening that law directly before citing a specific pinpoint."
+  },
+  {
+    "id": "hl-4-10",
+    "code": "HL 4:10",
+    "act": { "name": "Häkteslag", "sfs": "2010:611" },
+    "ref": "4 kap. 10 §",
+    "sv_lagtext": "En intagen får beläggas med fängsel: 1. vid förflyttning inom förvaringslokalen och vid transport eller annan vistelse utanför lokalen, om det är nödvändigt av säkerhetsskäl, eller 2. om han eller hon uppträder våldsamt och det är absolut nödvändigt med hänsyn till den intagnes egen eller någon annans säkerhet till liv eller hälsa.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/2010:611#K4P10",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/hakteslag-2010611_sfs-2010-611/#K4"
+    },
+    "verified": "2026-07-24",
+    "note": "The handbook's claim that HL 4:10 'extends to a fresh RB 24:7 arrest' is correct in substance, but not because Häkteslagen's own text reaches that far — its own scope covers people already 'intagna'. The bridge to a väktare's envarsgripande is made by Polismyndighetens föreskrift FAP 573-1, 9 kap. 1 §, which applies HL 4:10 första stycket to someone gripen under RB 24:7 andra stycket. Recommend citing FAP 573-1 alongside HL 4:10."
+  },
+  {
+    "id": "lul-35",
+    "code": "LUL 35 §",
+    "act": { "name": "Lag med särskilda bestämmelser om unga lagöverträdare", "sfs": "1964:167" },
+    "ref": "35 §",
+    "sv_lagtext": "Har någon före femton års ålder begått ett brott, på vilket fängelse skulle ha kunnat följa, och anträffas den unge på bar gärning eller på flykt från brottsplatsen, får han eller hon gripas av envar.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1964:167#P35",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964167-med-sarskilda-bestammelser-om_sfs-1964-167/"
+    },
+    "verified": "2026-07-24",
+    "note": "Core citizen's-arrest-for-under-15 claim confirmed. The 'no handcuffs' detail isn't traceable to explicit text in 35 § itself — it's a reasonable inference (an under-15 apprehension doesn't trigger HL 4:10/FAP 573-1's formal-gripande chain), not a directly cited rule. Worth a specific secondary source if this is meant as more than inference."
+  },
+  {
+    "id": "laga-sjalvtakt",
+    "code": "Laga självtäkt",
+    "act": null,
+    "ref": "Kungl. Maj:ts förordning (1864:11) s. 101, angående nya strafflagens införande",
+    "sv_lagtext": "Varje besittningsförhållande som någon utan rätt rubbat må å färsk gärning återställas av den vars besittning rubbats eller den som är i hans ställe.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1864:11_s.101",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/kungl-majts-forordning-186411-s-101-om-nya_sfs-1864-11%20s.%20101/"
+    },
+    "verified": "2026-07-24",
+    "note": "Confirmed directly on lagen.nu — no substitute secondary source needed. The 24h/på färsk gärning/goods-not-person/police-only-after-24h framing is accurate, but understates a risk: reclaiming property yourself after the 24-hour window has passed doesn't just lose its legal basis — it can itself amount to the crime of egenmäktigt förfarande (BrB 8:9)."
+  }
+]

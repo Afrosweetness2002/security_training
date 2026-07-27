@@ -92,9 +92,11 @@
      already hardcodes plain <code> markup, which would wipe a link wrapper applied only
      once at load. Clicking one opens a popover card in place (see lawcard below) rather
      than navigating away — looking up one law shouldn't cost you your scroll position. */
-  var LAWRE = /^(BrB|RB|RF|PL|FAP|LUL|HL)\b/i;
+  var LAWRE = /^(BrB|RB|RF|PL|FAP|LUL|HL|Laga självtäkt)\b/i;
+  var DIACRITICS = new RegExp('[' + String.fromCharCode(768) + '-' + String.fromCharCode(879) + ']', 'g');
   function slugify(s) {
-    return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    return s.toLowerCase().normalize('NFD').replace(DIACRITICS, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   }
   function linkStatutes() {
     [].forEach.call(document.querySelectorAll('code'), function (el) {
@@ -127,12 +129,24 @@
   var lawcardBody = document.getElementById('lawcard-body');
   var lawcardFull = document.getElementById('lawcard-full');
   var lawcardReturnFocus = null;
+  var LAWCARD_LABELS = {
+    covers: { en: 'What it covers', sv: 'Vad den omfattar' },
+    example: { en: 'Example', sv: 'Exempel' }
+  };
   function openLawCard(target, triggerEl) {
     lawcardReturnFocus = triggerEl || document.activeElement;
     var code = target.querySelector('code');
-    var desc = target.querySelector('td:nth-child(2)');
+    var covers = target.querySelector('td:nth-child(2)');
+    var example = target.querySelector('td:nth-child(3)');
     lawcardTitle.textContent = code ? code.textContent : '';
-    lawcardBody.innerHTML = desc ? desc.innerHTML : '';
+    var html = '';
+    if (covers) {
+      html += '<p class="lawcard-label">' + LAWCARD_LABELS.covers[curLang] + '</p>' + covers.innerHTML;
+    }
+    if (example) {
+      html += '<p class="lawcard-label">' + LAWCARD_LABELS.example[curLang] + '</p>' + example.innerHTML;
+    }
+    lawcardBody.innerHTML = html;
     lawcardFull.onclick = function (e) {
       e.preventDefault();
       closeLawCard();
@@ -156,7 +170,9 @@
 
   /* ---- language ---- */
   var banner = document.getElementById('svnote');
+  var curLang = 'en';
   function setLang(L) {
+    curLang = L;
     nodes.forEach(function (el) {
       if (L === 'sv' && SV[el.__key] !== undefined) el.innerHTML = SV[el.__key];
       else if (el.innerHTML !== el.__en) el.innerHTML = el.__en;
