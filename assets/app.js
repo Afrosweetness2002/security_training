@@ -228,7 +228,13 @@
     items.forEach(function (it) { it.a.classList.toggle('active', it === best); });
     if (best && !matchMedia('(max-width:900px)').matches) {
       var r = best.a.getBoundingClientRect(), n = toc.getBoundingClientRect();
-      if (r.top < n.top + 8 || r.bottom > n.bottom - 8) best.a.scrollIntoView({ block: 'nearest' });
+      /* Scroll #toc's own scrollTop directly rather than best.a.scrollIntoView(): with
+         enough TOC entries to make the sidebar itself scrollable, scrollIntoView()'s
+         nearest-scrollable-ancestor resolution is ambiguous under #toc's position:sticky
+         and can hijack an in-flight window-level smooth scroll (e.g. from clicking a
+         fragment link far down the page), leaving it stuck instead of completing. */
+      if (r.top < n.top + 8) toc.scrollTop -= (n.top + 8 - r.top);
+      else if (r.bottom > n.bottom - 8) toc.scrollTop += (r.bottom - (n.bottom - 8));
     }
   }
   addEventListener('scroll', function () {
