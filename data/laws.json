@@ -620,5 +620,53 @@
     },
     "verified": "2026-07-24",
     "note": "Confirmed directly on lagen.nu — no substitute secondary source needed. The 24h/på färsk gärning/goods-not-person/police-only-after-24h framing is accurate, but understates a risk: reclaiming property yourself after the 24-hour window has passed doesn't just lose its legal basis — it can itself amount to the crime of egenmäktigt förfarande (BrB 8:9)."
+  },
+  {
+    "id": "brb-24-5",
+    "code": "BrB 24:5",
+    "act": {
+      "name": "Brottsbalk",
+      "sfs": "1962:700"
+    },
+    "ref": "24 kap. 5 §",
+    "sv_lagtext": "Har någon på grund av vad som sägs i 1–4 §§ rätt att begå en annars straffbelagd handling, har var och en som hjälper honom eller henne samma rätt.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K24P5",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K24"
+    },
+    "verified": "2026-07-24",
+    "note": "sv_lagtext is a close paraphrase sourced via a secondary legal Q&A site (lawline.se), not a direct primary-source fetch of the paragraph text this session — the substance (a helper shares the helped person's 24:1–24:4 right) is corroborated by that source and matches the lecturer's PL 10/BrB 24:2/24:5 example, but the exact wording should be pinned against lagen.nu or riksdagen.se directly before treating it as verbatim."
+  },
+  {
+    "id": "brb-9-1",
+    "code": "BrB 9:1",
+    "act": {
+      "name": "Brottsbalk",
+      "sfs": "1962:700"
+    },
+    "ref": "9 kap. 1 §",
+    "sv_lagtext": "Den som medelst vilseledande förmår någon till handling eller underlåtenhet, som innebär vinning för gärningsmannen och skada för den vilseledde eller någon i vars ställe denne är, döms för bedrägeri till fängelse i högst två år.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K9P1",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K9"
+    },
+    "verified": "2026-07-24",
+    "note": "Penalty maximum (fängelse ≤ 2 years) corroborated via secondary legal-summary sites (kollpalagen.se, straffbart.se, lawline.se); direct primary-source fetch of the paragraph's exact current wording was not possible this session (lagen.nu/riksdagen.se pages returned only navigation/front-matter, not chapter 9 text) — recheck sv_lagtext against the live paragraph before citing it verbatim."
+  },
+  {
+    "id": "brb-9-2",
+    "code": "BrB 9:2",
+    "act": {
+      "name": "Brottsbalk",
+      "sfs": "1962:700"
+    },
+    "ref": "9 kap. 2 §",
+    "sv_lagtext": "Är brott som avses i 1 § med hänsyn till skadans omfattning och övriga omständigheter vid brottet att anse som ringa, döms för bedrägligt beteende till böter eller fängelse i högst sex månader.",
+    "sources": {
+      "lagen_nu": "https://lagen.nu/1962:700#K9P2",
+      "riksdagen": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/#K9"
+    },
+    "verified": "2026-07-24",
+    "note": "Penalty range (böter or fängelse ≤ 6 months) corroborated via secondary legal-summary sites (straffbart.se); direct primary-source fetch of the paragraph's exact current wording was not possible this session — recheck sv_lagtext against the live paragraph before citing it verbatim."
   }
 ]
