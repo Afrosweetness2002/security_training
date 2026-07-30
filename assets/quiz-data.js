@@ -1,4 +1,6 @@
-[
+/* Generated from data/quiz.json — window.QUIZ wrapper so the quiz works from file:// (no fetch). Regenerate: node -e "require('fs').writeFileSync('assets/quiz-data.js', 'window.QUIZ = ' + require('fs').readFileSync('data/quiz.json','utf8').trim() + ';
+')" */
+window.QUIZ = [
   { "id": "q1", "section": "s01", "q": "Vilken myndighet skriver regelverket FAP 573-1 för väktare?", "choices": ["Polismyndigheten", "Länsstyrelsen", "Arbetsmiljöverket", "Domstolsverket"], "correct": 0, "explain": "Polismyndigheten skriver FAP 573-1. Länsstyrelsen auktoriserar företag och godkänner enskilda väktare." },
   { "id": "q2", "section": "s01", "q": "Vad krävs för att ett bevakningsföretag ska få bedriva verksamhet?", "choices": ["Auktorisation", "Godkännande", "Tystnadsplikt", "Certifiering från Arbetsmiljöverket"], "correct": 0, "explain": "Företag behöver auktorisation; den enskilda väktaren behöver godkännande — båda utfärdas av Länsstyrelsen." },
   { "id": "q3", "section": "s01", "q": "Vad kallas den personliga prövning en enskild väktare måste genomgå?", "choices": ["Godkännande", "Auktorisation", "Legitimering", "Tillstånd"], "correct": 0, "explain": "Godkännande är personligt och gäller den enskilda väktaren; auktorisation gäller företaget." },
@@ -79,4 +81,4 @@
   { "id": "q66", "section": "laws", "q": "Vilken paragraf handlar om beslag och blandas lätt ihop med PL 19 §?", "choices": ["RB 27:4", "BrB 24:2", "RB 24:7", "PL 10 §"], "correct": 0, "explain": "PL 19 § (skyddsvisitation, säkerhet) och RB 27:4 (beslag) förväxlas lätt men gäller helt olika saker." },
   { "id": "q67", "section": "laws", "q": "HL 4:10 (handfängsel) utökas till ett nytt gripande enligt RB 24:7 genom vilken föreskrift?", "choices": ["FAP 573-1, 9 kap. 1 §", "Häkteslagens egen text direkt", "PL 10 §", "BrB 24:5"], "correct": 0, "explain": "Kopplingen går via FAP 573-1, inte via Häkteslagens egen text." },
   { "id": "q68", "section": "laws", "q": "Laga självtäkt tillåter dig att återta stulen egendom inom hur lång tid från stölden?", "choices": ["24 timmar", "1 timme", "72 timmar", "7 dagar"], "correct": 0, "explain": "Efter tidsfönstret kan återtagandet i sig vara BrB 8:8 egenmäktigt förfarande." }
-]
+];

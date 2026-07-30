@@ -27,7 +27,7 @@
 <nav id="toc">
   <div class="brand">🛡️ VU1 Field Handbook</div>
   <div class="sub">Väktargrundutbildning del 1</div>
-  <div id="viewbar"><button data-view="learning" class="on" data-t="viewbar.learning">📖 Learning</button><button data-view="laws" data-t="viewbar.laws">⚖️ Laws</button></div>
+  <div id="viewbar"><button data-view="learning" class="on" data-t="viewbar.learning">📖 Learning</button><button data-view="laws" data-t="viewbar.laws">⚖️ Laws</button><button data-view="quiz">📝 Quiz</button></div>
   <div id="langbar"><button data-lang="en" class="on">ENGLISH</button><button data-lang="sv">SVENSKA</button></div>
   <input id="search" type="search" placeholder="Filter…" aria-label="Filter sections">
   <div id="toclist"></div>
@@ -1404,9 +1404,50 @@
 </tbody></table></div>
 </section>
 </div><!-- /view-laws -->
+
+<div id="view-quiz" class="view" hidden>
+<section id="quizapp">
+<h2>Quiz</h2>
+<p class="lede">68 frågor från hela handboken — juridik, arbetsmiljö, bevakningstjänst, teknik, brand, etik och HLR.</p>
+
+<div id="quiz-start">
+<div class="cal idea">
+<p><span class="lab">Så funkar det</span> — Frågorna kommer i slumpad ordning, en i taget. Efter sista frågan ser du din poäng och kan gå igenom exakt vilka du fick rätt och fel på, med en kort förklaring till varje svar.</p>
+</div>
+<button id="quiz-startbtn" class="quizbtn primary" type="button">Starta quiz</button>
+</div>
+
+<div id="quiz-run" hidden>
+<div id="quiz-progressbar"><div id="quiz-progressfill"></div></div>
+<p id="quiz-progresslabel" class="tag"></p>
+<div id="quiz-q" class="quizq"></div>
+<div id="quiz-choices" role="radiogroup"></div>
+<div id="quiz-explain" class="cal idea" hidden></div>
+<button id="quiz-nextbtn" class="quizbtn primary" type="button" hidden>Nästa fråga →</button>
+</div>
+
+<div id="quiz-results" hidden>
+<div id="quiz-score" class="quizscore"></div>
+<p id="quiz-scoresub" class="lede"></p>
+<div id="quiz-filterbar">
+  <button data-filter="all" class="on" type="button">Alla (<span id="quiz-count-all"></span>)</button>
+  <button data-filter="wrong" type="button">Fel (<span id="quiz-count-wrong"></span>)</button>
+  <button data-filter="right" type="button">Rätt (<span id="quiz-count-right"></span>)</button>
+</div>
+<div id="quiz-review"></div>
+<div id="quiz-actions">
+  <button id="quiz-retrywrongbtn" class="quizbtn" type="button" hidden>Öva bara felen</button>
+  <button id="quiz-retrybtn" class="quizbtn primary" type="button">Gör om hela quizet</button>
+</div>
+</div>
+
+</section>
+</div><!-- /view-quiz -->
 </main>
 </div>
 <script src="assets/i18n.sv.js"></script>
+<script src="assets/quiz-data.js"></script>
 <script src="assets/app.js"></script>
+<script src="assets/quiz.js"></script>
 </body>
 </html>

@@ -230,10 +230,22 @@ Tracked as GitHub issues on the repo now — Swedish translation (#1) is done an
 0. **[Laws — crime-by-crime list](https://github.com/Afrosweetness2002/security_training/issues/4)**
    — the framework, general concepts, and glossary are done; still open pending AF's specific
    list of which crimes punish förberedelse/försök and at what penalty.
-1. **[Quiz](https://github.com/Afrosweetness2002/security_training/issues/2)** —
-   **fully Swedish** (not the bilingual toggle pattern), multiple choice + typed-answer modes.
-   The 13 existing self-test Q&As in §12 convert directly; need plausible Swedish distractors.
-   Store in `data/quiz.json`.
+1. **[Quiz](https://github.com/Afrosweetness2002/security_training/issues/2)** — **done**,
+   built for AF's 2026-07-30 quiz day. New view `#view-quiz` (viewbar button, same
+   `showView()` plumbing as Laws), `assets/quiz.js` (shuffle order + shuffle choices per
+   question, one question at a time, immediate right/wrong feedback + explanation, then a
+   results screen: score, percentage, and a full review list filterable to all/wrong/right,
+   plus "practice only the wrong ones" and "redo the whole quiz"). 68 questions in
+   `data/quiz.json`, **fully Swedish**, spanning every section (§01–§12) and four Laws-glossary
+   statute traps (PL 19 § vs RB 27:4, HL 4:10, laga självtäkt), written directly off the
+   handbook prose so nothing quizzes a fact the page doesn't already teach. Loaded via
+   `assets/quiz-data.js` (`window.QUIZ = <same array>`, generated from `data/quiz.json` — see
+   the comment at the top of that file to regenerate) rather than `fetch()`, so it still works
+   from `file://`. `data/quiz.json` remains the canonical source; edit it, then regenerate the
+   `.js` wrapper. Verified end-to-end with a jsdom harness (view switch → run all 68 → score →
+   filter review → retry-wrong-only → full retry) since no browser was available in this
+   environment. Not yet done: typed-answer mode and per-section practice were in the original
+   plan but skipped for the deadline — revisit if wanted later.
 2. **[Flashcards](https://github.com/Afrosweetness2002/security_training/issues/3)** —
    **fully Swedish** term/definition pairs for memorisation. The definition tables in §01,
    §02a, §03 and §04 contain these pairs; `assets/i18n.sv.js` is effectively an EN↔SV term

@@ -19,11 +19,16 @@ from a web server, so there is nothing to install and nothing to compile.
 ## Layout
 
 ```
-index.html            all content — 12 course sections, tables, callouts, inline SVG diagrams
+index.html            all content — 12 course sections, tables, callouts, inline SVG diagrams,
+                      plus the Laws and Quiz views
 assets/styles.css     design system (CSS variables), light + dark, mobile drawer, print styles
 assets/app.js         nav generation, scrollspy, EN/SV toggle, mobile drawer, filter
 assets/i18n.sv.js     Swedish strings, keyed by English text content
-data/quiz.json        (empty) planned multiple-choice bank
+assets/quiz.js        quiz view logic — shuffle, run-through, scoring, right/wrong review
+assets/quiz-data.js   window.QUIZ = <data/quiz.json>, generated so the quiz loads without
+                      fetch() and still works from file://
+data/quiz.json        68-question multiple-choice bank, fully Swedish (canonical source —
+                      after editing, regenerate assets/quiz-data.js, see comment at its top)
 data/flashcards.json  (empty) planned term/definition pairs
 ```
 
